@@ -1,0 +1,314 @@
+/* ED-LAB: Simple, Robust Layout */
+
+/* 
+   ED-LAB leverages the global design system variables (style.css) 
+   but defines specific semantic overrides for the IDE interface.
+*/
+
+:root {
+    /* Default (Light Mode) IDE Colors - if needed */
+    --lab-bg: #FFFFFF;
+    --lab-sidebar: #F0F0F0;
+    --lab-border: #E0E0E0;
+    --lab-text: #121212;
+    --lab-accent: var(--accent-violet);
+    --font-mono: 'Fira Code', 'Consolas', monospace;
+
+    --console-bg: #F8F8F8;
+    --console-text: #333;
+}
+
+/* Dark Mode Overrides for IDE */
+[data-theme="dark"] {
+    --lab-bg: #0F1117;
+    --lab-sidebar: #14141B;
+    --lab-border: rgba(255, 255, 255, 0.08);
+    --lab-text: #E6E8EB;
+
+    --console-bg: #14141B;
+    --console-text: #D4D4D4;
+}
+
+/* Also support media query if JS hasn't loaded logic yet */
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+        --lab-bg: #0F1117;
+        --lab-sidebar: #14141B;
+        --lab-border: rgba(255, 255, 255, 0.08);
+        --lab-text: #E6E8EB;
+        --console-bg: #14141B;
+        --console-text: #D4D4D4;
+    }
+}
+
+/* Body Layout */
+
+body.ed-lab-body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: var(--lab-bg);
+    color: var(--lab-text);
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Navbar */
+.lab-navbar {
+    height: 50px;
+    background: var(--lab-sidebar);
+    border-bottom: 1px solid var(--lab-border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    flex-shrink: 0;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.nav-left,
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.back-link {
+    color: var(--text-muted, #999);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+.back-link:hover {
+    color: var(--lab-text);
+}
+
+.divider-v {
+    width: 1px;
+    height: 16px;
+    background: var(--lab-border);
+}
+
+.brand-text {
+    font-weight: 600;
+    color: var(--lab-text);
+    letter-spacing: 0.05em;
+}
+
+/* Buttons */
+.tool-btn {
+    background: transparent;
+    border: 1px solid var(--lab-border);
+    color: var(--lab-text);
+    height: 30px;
+    padding: 0 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.2s;
+}
+
+.tool-btn:hover {
+    background: rgba(128, 128, 128, 0.1);
+    border-color: var(--lab-text);
+}
+
+.run-btn {
+    background: var(--accent-violet);
+    /* Using Global Accent */
+    color: white;
+    border: none;
+    height: 30px;
+    padding: 0 1.5rem;
+    border-radius: 2px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.run-btn:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+/* Workspace */
+.ide-container {
+    flex: 1;
+    display: flex;
+    overflow: hidden;
+}
+
+.pane {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    background: var(--lab-bg);
+}
+
+/* Workspace Ratios */
+.editor-pane {
+    flex: 4;
+    border-right: 1px solid var(--lab-border);
+}
+
+.output-pane {
+    flex: 6;
+    background: var(--console-bg);
+}
+
+/* Editor */
+#editor {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Output Header */
+.pane-header {
+    height: 40px;
+    background: var(--lab-sidebar);
+    border-bottom: 1px solid var(--lab-border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0.5rem;
+}
+
+.tab-container {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    gap: 1px;
+}
+
+.tab-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    height: 100%;
+    padding: 0 1rem;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s;
+}
+
+.tab-btn:hover {
+    color: var(--lab-text);
+    background: rgba(128, 128, 128, 0.05);
+}
+
+.tab-btn.active {
+    color: var(--lab-text);
+    border-bottom-color: var(--lab-accent);
+}
+
+.clear-btn {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    cursor: pointer;
+}
+
+.clear-btn:hover {
+    color: var(--lab-text);
+}
+
+/* Console View */
+.view-layer {
+    display: none;
+    flex: 1;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.view-layer.active {
+    display: flex;
+}
+
+.console-host {
+    flex: 1;
+    background: var(--console-bg);
+    color: var(--console-text);
+    font-family: var(--font-mono);
+    padding: 1rem;
+    overflow-y: auto;
+    white-space: pre-wrap;
+    word-break: break-all;
+    font-size: 14px;
+}
+
+.console-line {
+    margin-bottom: 0.2rem;
+}
+
+.console-line.error {
+    color: #FF6B68;
+    /* Muted Red per request */
+}
+
+.console-line.system {
+    color: var(--lab-accent);
+    margin-top: 1rem;
+    border-top: 1px solid var(--lab-border);
+    padding-top: 0.5rem;
+}
+
+/* Canvas View */
+#canvas-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: white;
+    /* Canvas usually stays white for drawing unless specified */
+    overflow: hidden;
+}
+
+/* Dark mode canvas? Usually Turtle needs white paper. Keep white. */
+
+#canvas-target {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: transparent;
+}
+
+body>canvas {
+    display: none !important;
+}
+
+#canvas-target canvas {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    box-shadow: none !important;
+    border: none !important;
+    outline: none !important;
+    background-color: transparent;
+}

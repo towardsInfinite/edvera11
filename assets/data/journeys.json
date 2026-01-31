@@ -1,0 +1,355 @@
+{
+  "verticals": [
+    {
+      "id": "foundations",
+      "name": "Foundations",
+      "accent": "#CBA135",
+      "ageBands": [
+        {
+          "id": "6-8",
+          "label": "6–8",
+          "stages": [
+            {
+              "id": "f_1",
+              "number": "Stage 01",
+              "title": "Spatial Logic",
+              "descriptor": "Understanding space and structure through mental manipulation.",
+              "goal": "Goal: Visualize and rotate 3D objects mentally without physical aids.",
+              "tags": [
+                "Concept",
+                "Practice"
+              ],
+              "level": "Beginner",
+              "learn": [
+                "3D Visualization",
+                "Pattern Recognition",
+                "Basic Geometry"
+              ],
+              "matter": "Develops the mental playground for advanced math.",
+              "examples": [
+                "Minecraft mazes",
+                "Lego structures"
+              ],
+              "projects": [
+                "Build a virtual city"
+              ],
+              "parents": "Expect your child to start noticing patterns in architecture and daily objects."
+            },
+            {
+              "id": "f_2",
+              "number": "Stage 02",
+              "title": "Algorithmic Thinking",
+              "descriptor": "First steps in logic sequences and cause-and-effect.",
+              "goal": "Goal: Create a linear sequence of instructions to solve a maze.",
+              "tags": [
+                "Concept",
+                "Project"
+              ],
+              "level": "Core",
+              "learn": [
+                "Sequencing",
+                "Loops",
+                "Cause & Effect"
+              ],
+              "matter": "Foundational logic for all programming.",
+              "examples": [
+                "Scratch Jr stories",
+                "Robot turtle games"
+              ],
+              "projects": [
+                "Animated storybook"
+              ],
+              "parents": "They will begin to understand that computers only do exactly what they are told."
+            }
+          ]
+        },
+        {
+          "id": "9-10",
+          "label": "9–10",
+          "stages": [
+            {
+              "id": "f_3",
+              "number": "Stage 01",
+              "title": "Visual Coding",
+              "descriptor": "Constructing logic using block-based structures.",
+              "goal": "Goal: Build an interactive game with score-keeping and variables.",
+              "tags": [
+                "Practice",
+                "Project"
+              ],
+              "level": "Beginner",
+              "learn": [
+                "Conditionals",
+                "Variables",
+                "Events"
+              ],
+              "matter": "Moving from passive usage to active creation.",
+              "examples": [
+                "Scratch games",
+                "Interactive art"
+              ],
+              "projects": [
+                "Platformer game"
+              ],
+              "parents": "A shift from playing games to wondering 'how was this made?'"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "programming",
+      "name": "Programming",
+      "accent": "#4A7C59",
+      "ageBands": [
+        {
+          "id": "11-13",
+          "label": "11–13",
+          "stages": [
+            {
+              "id": "p_1",
+              "number": "Stage 01",
+              "title": "Python Syntax",
+              "descriptor": "Transitioning from visual blocks to typed text.",
+              "goal": "Goal: Write script-based programs that handle user input and data.",
+              "tags": [
+                "Concept",
+                "Practice"
+              ],
+              "level": "Core",
+              "learn": [
+                "Syntax rules",
+                "Data types",
+                "Functions"
+              ],
+              "matter": "The industry standard language for AI and Data.",
+              "examples": [
+                "Text adventures",
+                "Calculators"
+              ],
+              "projects": [
+                "Chatbot"
+              ],
+              "parents": "Initially frustrating due to syntax errors, but builds resilience and attention to detail."
+            },
+            {
+              "id": "p_2",
+              "number": "Stage 02",
+              "title": "Game Scripting",
+              "descriptor": "Applying logic in dynamic 3D environments.",
+              "goal": "Goal: Script interaction physics and event listeners in Roblox Studio.",
+              "tags": [
+                "Project",
+                "Assessment"
+              ],
+              "level": "Advanced",
+              "learn": [
+                "Lua scripting",
+                "Event handling",
+                "Physics interaction"
+              ],
+              "matter": "Applying code to visible, interactive 3D worlds.",
+              "examples": [
+                "Roblox obbys",
+                "Game mechanics"
+              ],
+              "projects": [
+                "Multiplayer game level"
+              ],
+              "parents": "They will see immediate visual results from their code, which is highly motivating."
+            }
+          ]
+        },
+        {
+          "id": "14-16",
+          "label": "14–16",
+          "stages": [
+            {
+              "id": "p_3",
+              "number": "Stage 01",
+              "title": "Web Architecture",
+              "descriptor": "Understanding the backbone of the internet.",
+              "goal": "Goal: Deploy a live website with custom structure and style.",
+              "tags": [
+                "Concept",
+                "Project"
+              ],
+              "level": "Core",
+              "learn": [
+                "HTML/CSS",
+                "JavaScript DOM",
+                "API basics"
+              ],
+              "matter": "Building real-world deployable applications.",
+              "examples": [
+                "Personal portfolio",
+                "Todo app"
+              ],
+              "projects": [
+                "Dynamic website"
+              ],
+              "parents": "Understanding how the websites they visit every day are actually constructed."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "math",
+      "name": "Mathematics",
+      "accent": "#CBA135",
+      "ageBands": [
+        {
+          "id": "11-13",
+          "label": "11–13",
+          "stages": [
+            {
+              "id": "m_1",
+              "number": "Stage 01",
+              "title": "Algebraic Thinking",
+              "descriptor": "Moving from arithmetic to abstract variables.",
+              "goal": "Goal: Model real-world problems using variables and equations.",
+              "tags": [
+                "Concept",
+                "Practice"
+              ],
+              "level": "Core",
+              "learn": [
+                "Linear equations",
+                "Inequalities",
+                "Graphing"
+              ],
+              "matter": "The language of science and higher logic.",
+              "examples": [
+                "Slope visualisation",
+                "Variable games"
+              ],
+              "projects": [
+                "Math visualiser tool"
+              ],
+              "parents": "The critical bridge between 'calculating' and 'mathematical thinking'."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ai-ml",
+      "name": "AI & ML",
+      "accent": "#8A6D9A",
+      "ageBands": [
+        {
+          "id": "14-16",
+          "label": "14–16",
+          "stages": [
+            {
+              "id": "ai_1",
+              "number": "Stage 01",
+              "title": "Neural Networks",
+              "descriptor": "Understanding the 'brain' structure of AI.",
+              "goal": "Goal: Train a simple model to recognize patterns in data.",
+              "tags": [
+                "Concept",
+                "Project"
+              ],
+              "level": "Advanced",
+              "learn": [
+                "Perceptrons",
+                "Training data",
+                "Bias"
+              ],
+              "matter": "Demystifying how machines learn patterns.",
+              "examples": [
+                "Image classifier",
+                "Text predictor"
+              ],
+              "projects": [
+                "Custom image recognition model"
+              ],
+              "parents": "Demystifying AI so they control the tool rather than fearing it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "curricula",
+      "name": "International Curricula",
+      "accent": "#E5E4E2",
+      "ageBands": [
+        {
+          "id": "14-16",
+          "label": "14–16",
+          "stages": [
+            {
+              "id": "c_1",
+              "number": "Stage 01",
+              "title": "IGCSE CS",
+              "descriptor": "Mastering the Cambridge Computer Science syllabus.",
+              "goal": "Goal: consistently score A/A* in past paper simulations.",
+              "tags": [
+                "Assessment",
+                "Review"
+              ],
+              "level": "Core",
+              "learn": [
+                "Data representation",
+                "Algorithm design",
+                "Hardware"
+              ],
+              "matter": "High-scoring foundation for pre-university.",
+              "examples": [
+                "Past papers",
+                "Theory notes"
+              ],
+              "projects": [
+                "Mock exam portfolio"
+              ],
+              "examTags": [
+                "IGCSE",
+                "O-Level"
+              ],
+              "parents": "Focused exam technique and theoretical precision."
+            }
+          ]
+        },
+        {
+          "id": "16-18",
+          "label": "16–18",
+          "stages": [
+            {
+              "id": "c_2",
+              "number": "Stage 01",
+              "title": "IB CS HL",
+              "descriptor": "University-level abstraction and complexity.",
+              "goal": "Goal: Deliver a complex software solution for the Internal Assessment.",
+              "tags": [
+                "Project",
+                "Assessment"
+              ],
+              "level": "Advanced",
+              "learn": [
+                "OOP",
+                "Data Structures",
+                "Resource management"
+              ],
+              "matter": "University-level computer science concepts.",
+              "examples": [
+                "Internal Assessment",
+                "Case Study"
+              ],
+              "projects": [
+                "Complex system solution"
+              ],
+              "examTags": [
+                "IB",
+                "A-Level"
+              ],
+              "parents": "Preparing for the rigour of a Computer Science degree."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

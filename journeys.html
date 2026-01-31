@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>Academic Roadmaps | Coding & Maths Journeys | EDVERA</title>
+    <meta name="description"
+        content="Explore structured academic roadmaps from Foundations to Advanced Programming and Mathematics.">
+
+    <!-- Design System -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/journeys.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/logo.png" type="image/png">
+
+    <style>
+        body {
+            background-color: var(--color-ivory);
+        }
+    </style>
+</head>
+
+<body class="journeys-page">
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="nav-logo" style="display: flex; align-items: center; gap: 0.5rem;">
+                <img src="assets/images/logo.png" alt="EDVERA Logo" style="height: 42px; width: auto;">
+                EDVERA
+            </a>
+            <button class="mobile-nav-toggle" aria-label="Toggle navigation">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 6H20M4 12H20M4 18H20" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </button>
+            <div class="nav-links">
+                <a href="programs.html" class="hover-link">Programs</a>
+                <a href="method.html" class="hover-link">Method</a>
+                <a href="journeys.html" class="hover-link"
+                    style="color: var(--color-navy); font-weight: 600;">Journeys</a>
+                <a href="ed-lab.html" class="hover-link">ED-LAB</a>
+                <a href="parents.html" class="hover-link">Parents</a>
+                <a href="#" class="btn btn-primary js-open-diagnostic"
+                    style="padding: 0.6rem 1.2rem; font-size: 0.85rem;">Book Free Diagnostic</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="journeys-page-wrapper">
+
+        <!-- Header / Controls (Sticky Top) -->
+        <header class="journeys-header sticky-controls">
+            <div class="container">
+                <div class="controls-row top-row">
+                    <!-- Vertical Tabs -->
+                    <div id="vertical-tabs" class="vertical-tabs">
+                        <!-- Injected via JS -->
+                    </div>
+                </div>
+                <div class="controls-row bottom-row">
+                    <!-- Age Filter removed -->
+                </div>
+            </div>
+        </header>
+
+        <!-- Split Layout -->
+        <div class="container journeys-split-layout">
+
+            <!-- Left Rail (Sticky) -->
+            <aside class="rail-column">
+                <div class="rail-track-container">
+                    <div class="rail-line-bg"></div>
+                    <div class="rail-line-fill" id="rail-fill"></div>
+                    <div class="rail-dots-wrapper" id="rail-dots">
+                        <!-- Injected via JS -->
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Right Content (Scrollable) -->
+            <main class="cards-column" id="cards-container">
+                <!-- Injected via JS -->
+            </main>
+
+        </div>
+    </div>
+
+    <!-- Mobile Bottom Sheet (Used for station links if needed, but primary interaction is scroll) -->
+    <!-- We might not need the panel anymore if cards expand, but keeping the div structure clean. -->
+
+    <!-- Diagnostic Modal -->
+    <div id="diagnostic-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <div class="modal-header">
+                <h3>Book Free Diagnostic Session</h3>
+                <p>Please share your details to schedule a session.</p>
+            </div>
+            <form id="diagnostic-form">
+                <div class="form-group">
+                    <label for="parent-name" class="form-label">Parent's Name <span class="required">*</span></label>
+                    <input type="text" id="parent-name" class="form-input" placeholder="Enter your full name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email" class="form-label">Email Address <span class="required">*</span></label>
+                    <input type="email" id="email" class="form-input" placeholder="name@example.com" required>
+                </div>
+
+                <!-- Removed Contact Number as per request -->
+
+                <div class="form-group" style="margin-top: 1.5rem;">
+                    <label class="form-label">Select Child's Age</label>
+                    <input type="hidden" id="learner-age" name="learner-age">
+                    <div class="age-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.5rem;">
+                        <button type="button" class="age-btn" data-value="5">Age 5</button>
+                        <button type="button" class="age-btn" data-value="6">Age 6</button>
+                        <button type="button" class="age-btn" data-value="7">Age 7</button>
+                        <button type="button" class="age-btn" data-value="8">Age 8</button>
+                        <button type="button" class="age-btn" data-value="9">Age 9</button>
+                        <button type="button" class="age-btn" data-value="10">Age 10</button>
+                        <button type="button" class="age-btn" data-value="11">Age 11</button>
+                        <button type="button" class="age-btn" data-value="12">Age 12</button>
+                        <button type="button" class="age-btn" data-value="13">Age 13</button>
+                        <button type="button" class="age-btn" data-value="14">Age 14</button>
+                        <button type="button" class="age-btn" data-value="15+">Age 15+</button>
+                    </div>
+                </div>
+
+                <div class="form-group" style="margin-top: 1.5rem;">
+                    <label for="learner-name" class="form-label">Learner's Name <span
+                            class="optional">(Optional)</span></label>
+                    <input type="text" id="learner-name" class="form-input" placeholder="Child's name">
+                </div>
+
+                <div class="form-group">
+                    <label for="comments" class="form-label">Additional Comments <span
+                            class="optional">(Optional)</span></label>
+                    <textarea id="comments" class="form-textarea"
+                        placeholder="Any specific learning goals or concerns?"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary"
+                    style="width: 100%; background-color: var(--accent-amber); border-color: var(--accent-amber); color: #0E0E12; font-weight: 600;">Book
+                    a Diagnostic</button>
+            </form>
+
+            <div id="diagnostic-success" style="display: none; text-align: center; padding: 2rem 0;">
+                <div style="font-size: 3rem; color: var(--accent-teal); margin-bottom: 1rem;">&#10003;</div>
+                <h3 style="margin-bottom: 0.5rem;">Request Received</h3>
+                <p style="color: var(--text-muted); margin-bottom: 2rem;">
+                    Thank you for sharing your details. Our academic team will review your profile and contact you via
+                    WhatsApp shortly to schedule the diagnostic session.
+                </p>
+                <button class="btn btn-secondary js-close-modal">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/journeys.js"></script>
+
+</body>
+
+</html>

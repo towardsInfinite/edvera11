@@ -1,0 +1,475 @@
+/* Learning Journeys - Refined Layout */
+
+/* 
+   Note: Color palette inherited from style.css 
+   We only define specific overrides or journey-specific tokens here.
+*/
+
+:root {
+    /* Inherit global accents */
+    --accent-base: var(--color-primary);
+    /* Default fallback */
+
+    --ease-premium: cubic-bezier(0.22, 1, 0.36, 1);
+    --duration-short: 200ms;
+    --duration-medium: 350ms;
+    --duration-long: 420ms;
+}
+
+body.journeys-page {
+    background-color: var(--bg-page);
+    color: var(--text-main);
+}
+
+.journeys-page-wrapper {
+    padding-top: 80px;
+    /* Nav offest */
+    min-height: 100vh;
+}
+
+/* --- Sticky Controls --- */
+.sticky-controls {
+    position: sticky;
+    top: 70px;
+    /* Below main nav */
+    z-index: 100;
+    background: var(--bg-nav);
+    /* Ivory with blur */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-subtle);
+    padding: 1rem 0;
+    transition: box-shadow 0.3s ease;
+}
+
+.sticky-controls.scrolled {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+
+.controls-row {
+    margin-bottom: 0.5rem;
+}
+
+.controls-row.bottom-row {
+    margin-bottom: 0;
+}
+
+/* Tabs & Filters */
+.vertical-tabs {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+    border-bottom: 1px solid transparent;
+    /* Align visuals */
+    padding-bottom: 0.5rem;
+}
+
+.vertical-tabs::-webkit-scrollbar {
+    display: none;
+}
+
+.v-tab {
+    background: none;
+    border: none;
+    font-family: var(--font-sans, 'Inter', sans-serif);
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    cursor: pointer;
+    white-space: nowrap;
+    transition: color var(--duration-short);
+    position: relative;
+}
+
+.v-tab:hover,
+.v-tab.active {
+    color: var(--text-main);
+}
+
+.v-tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    /* Align with container padding */
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--text-main);
+}
+
+.age-filter {
+    display: flex;
+    gap: 0.5rem;
+    overflow-x: auto;
+    padding-bottom: 0.25rem;
+}
+
+.age-btn {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    padding: 0.3rem 0.9rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all var(--duration-short);
+}
+
+.age-btn:hover {
+    border-color: var(--text-main);
+    color: var(--text-main);
+}
+
+.age-btn.active {
+    background: var(--text-main);
+    color: white;
+    border-color: var(--text-main);
+}
+
+/* --- Split Layout --- */
+.journeys-split-layout {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    /* Rail width | Content */
+    gap: 4rem;
+    padding-top: 3rem;
+    padding-bottom: 6rem;
+    position: relative;
+}
+
+/* Left Rail */
+.rail-column {
+    position: sticky;
+    top: 220px;
+    /* Adjust based on header height approx 150px + nav 70px */
+    height: calc(100vh - 250px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rail-track-container {
+    position: relative;
+    height: 100%;
+    width: 20px;
+    /* Interactive area */
+    display: flex;
+    justify-content: center;
+}
+
+.rail-line-bg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    background: var(--border-subtle);
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.rail-line-fill {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 2px;
+    background: var(--current-accent, var(--text-main));
+    transform: translateX(-50%);
+    height: 0%;
+    /* JS updates this */
+    z-index: 2;
+    transition: height var(--duration-long) var(--ease-premium);
+}
+
+.rail-dots-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    /* JS will position dots absolutely within this relative to percentage or specific pixel slots */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* Dots placed by margin/calc */
+    align-items: center;
+}
+
+/* Dots are injected by JS to align with cards or evenly spaced? 
+   Better approach: Use IntersectionObserver to highlight dot.
+   Actually, rendering dots here that link to scroll positions is key.
+   However, calculating exact vertical position to match card scroll flow is hard.
+   Alternative: The rail doesn't physically match singular scroll pixels but represents the sequence.
+   Let's space them evenly or let the layout driven by cards? 
+   No, "straight line journey". 
+   Let's space dots evenly in the rail and map click to scroll into view.
+*/
+
+.rail-dot {
+    width: 14px;
+    height: 14px;
+    background: var(--bg-page);
+    border: 2px solid var(--text-main);
+    border-radius: 50%;
+    margin-bottom: 2rem;
+    /* Just automatic spacing for now, JS can control */
+    cursor: pointer;
+    position: relative;
+    transition: all var(--duration-short) var(--ease-premium);
+    /* Use absolute positioning in JS? Or flex? Flex is easier if we just list stages. */
+    flex-shrink: 0;
+}
+
+.rail-dot:hover {
+    transform: scale(1.3);
+    border-color: var(--current-accent, var(--text-main));
+}
+
+.rail-dot.active {
+    background: var(--current-accent, var(--text-main));
+    border-color: var(--current-accent, var(--text-main));
+    box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.05);
+}
+
+/* To ensure line fill works, we need to know height. 
+   If flex, we rely on 'step k of n' logic for height %.
+*/
+
+/* --- Right Content (Cards) --- */
+.cards-column {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-bottom: 20vh;
+    transition: opacity var(--duration-medium) ease;
+}
+
+.rail-dots-wrapper {
+    /* ... existing props ... */
+    transition: opacity var(--duration-medium) ease;
+}
+
+/* Card Styling */
+.stage-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-left: 4px solid transparent;
+    border-radius: 4px;
+    padding: 2rem;
+    transition: all var(--duration-medium) var(--ease-premium);
+    opacity: 0.5;
+    transform: translateY(8px);
+    /* Updated to translateY per request */
+}
+
+.stage-card.active {
+    opacity: 1;
+    transform: translateY(0);
+    border-left-color: var(--current-accent, var(--text-main));
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
+}
+
+.stage-card:hover {
+    border-left-color: var(--current-accent, var(--text-main));
+    /* Subtle preview */
+    opacity: 0.9;
+}
+
+.stage-header {
+    position: relative;
+}
+
+.stage-label {
+    display: block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+}
+
+.stage-title {
+    font-size: 1.5rem;
+    font-family: var(--font-serif);
+    color: var(--text-main);
+    margin-bottom: 0.75rem;
+}
+
+.stage-desc {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-text-dark);
+    margin-bottom: 1.5rem;
+    max-width: 650px;
+}
+
+.stage-goal-box {
+    background: rgba(11, 28, 45, 0.03);
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 1.5rem;
+    border-left: 2px solid var(--current-accent, var(--text-main));
+}
+
+.stage-goal {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text-main);
+}
+
+.stage-goal strong {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    margin-right: 0.5rem;
+    opacity: 0.7;
+}
+
+.stage-tags {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+}
+
+.tag {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    background: var(--bg-page);
+    border: 1px solid var(--border-subtle);
+    color: var(--text-muted);
+}
+
+/* Expandable Details */
+.expand-btn {
+    background: none;
+    border: none;
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-main);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0;
+}
+
+.expand-btn svg {
+    transition: transform var(--duration-medium) ease;
+}
+
+.expand-btn.open svg {
+    transform: rotate(180deg);
+}
+
+.card-details {
+    height: 0;
+    overflow: hidden;
+    transition: height var(--duration-medium) var(--ease-premium);
+}
+
+.details-content {
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-subtle);
+    margin-top: 1.5rem;
+}
+
+.detail-row {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    margin-bottom: 1rem;
+}
+
+.detail-label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-muted);
+}
+
+.detail-text {
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+ul.detail-list {
+    padding-left: 1rem;
+    list-style: disc;
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+    .journeys-split-layout {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding-top: 5rem;
+        /* Space for top rail */
+    }
+
+    /* Sticky Rail moves to top horizontal */
+    .rail-column {
+        position: fixed;
+        top: 140px;
+        /* Below filters */
+        left: 0;
+        width: 100%;
+        height: 60px;
+        flex-direction: row;
+        background: var(--bg-page);
+        border-bottom: 1px solid var(--border-subtle);
+        z-index: 90;
+        padding: 0 1rem;
+        overflow-x: auto;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .rail-track-container {
+        height: 4px;
+        width: 100%;
+        /* Use flex for dots horizontal */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-width: 300px;
+        /* Ensure scroll if many stages */
+    }
+
+    .rail-line-bg {
+        width: 100%;
+        height: 2px;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+    }
+
+    .rail-line-fill {
+        height: 2px;
+        width: 0%;
+        /* Horizontal fill */
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        z-index: 2;
+    }
+
+    .rail-dots-wrapper {
+        position: relative;
+        flex-direction: row;
+        /* Horizontal dots */
+        justify-content: space-between;
+        width: 100%;
+        height: auto;
+    }
+
+    .rail-dot {
+        margin-bottom: 0;
+    }
+
+    .cards-column {
+        padding-top: 2rem;
+    }
+}

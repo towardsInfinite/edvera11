@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>EDVERA | 1:1 Online Coding & Maths Platform for IGCSE/IB</title>
+    <meta name="description"
+        content="The premium 1:1 online coding and maths platform for students aged 6-16. Personalised mentorship aligned with IGCSE, IB, and GCSE standards. Book a diagnostic session today.">
+    <meta name="keywords"
+        content="1:1 coding classes, online maths tuition, IGCSE computer science, IB maths tutor, private coding mentor, EDVERA">
+
+    <!-- Design System -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Favicon (Placeholder) -->
+    <link rel="icon" href="assets/images/logo.png" type="image/png">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="nav-logo" style="display: flex; align-items: center; gap: 0.5rem;">
+                <img src="assets/images/logo.png" alt="EDVERA Logo" style="height: 42px; width: auto;">
+                EDVERA
+            </a>
+            <button class="mobile-nav-toggle" aria-label="Toggle navigation">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 6H20M4 12H20M4 18H20" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </button>
+            <div class="nav-links">
+                <a href="programs.html" class="hover-link">Programs</a>
+                <a href="method.html" class="hover-link">Method</a>
+                <a href="ed-lab.html" class="hover-link">ED-LAB</a>
+                <a href="journeys.html" class="hover-link">Journeys</a>
+                <a href="index.html#outcomes" class="hover-link">Outcomes</a>
+                <a href="parents.html" class="hover-link">Parents</a>
+                <a href="#" class="btn btn-primary js-open-diagnostic"
+                    style="padding: 0.6rem 1.2rem; font-size: 0.85rem;">Book Free Diagnostic</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 1. Hero Section -->
+    <header class="section" style="padding-top: 140px; padding-bottom: 6rem;">
+        <div class="container grid" style="grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+            <div class="reveal-on-scroll">
+                <h1 style="font-size: 3.5rem; margin-bottom: 1.5rem; letter-spacing: -0.03em;">
+                    Structured Intellectual Development.
+                </h1>
+                <p style="font-size: 1.25rem; opacity: 0.85; margin-bottom: 2.5rem; max-width: 500px;">
+                    1:1 personalised learning aligned to international curricula. Built for the long term.
+                </p>
+                <div class="flex" style="gap: 1.5rem; align-items: center;">
+                    <a href="#" class="btn btn-primary js-open-diagnostic">Book Free Diagnostic & Placement
+                        Session</a>
+                    <a href="mailto:admissions@edvera.org" class="hover-link"
+                        style="font-size: 0.95rem; font-weight: 500;">Email Admissions &rarr;</a>
+                </div>
+            </div>
+            <div class="reveal-on-scroll delay-2"
+                style="position: relative; height: 500px; border-radius: 2px; overflow: hidden;">
+                <img src="assets/images/hero.jpg" alt="Student engaged in focused learning"
+                    style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. Brand Positioning Strip -->
+    <section class="section"
+        style="background-color: var(--color-bg-light); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+        <div class="container text-center reveal-on-scroll">
+            <p
+                style="font-family: var(--font-serif); font-size: 1.5rem; max-width: 800px; margin: 0 auto; line-height: 1.6;">
+                EDVERA believes that education is not entertainment. We cultivate structure, discipline, and cognitive
+                rigour, using modern tools intentionally to develop logic and systems thinking in high-potential
+                students.
+            </p>
+        </div>
+    </section>
+
+    <!-- 3. Program Architecture -->
+    <section id="programs" class="section">
+        <div class="container">
+            <div class="text-center reveal-on-scroll" style="margin-bottom: 4rem;">
+                <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Academic Pathways</h2>
+                <p class="text-muted">Structured progression of cognitive development.</p>
+            </div>
+
+            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                <!-- Card 1: Foundations (Featured Image) -->
+                <div class="card reveal-on-scroll">
+                    <img src="assets/images/foundations.jpg" alt="Child solving spatial logic puzzle" class="card-img">
+                    <div class="card-content">
+                        <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Foundations</h3>
+                        <p class="text-muted"
+                            style="font-size: 0.9rem; margin-bottom: 1.5rem; text-transform: uppercase; letter-spacing: 0.05em;">
+                            Spatial Logic</p>
+                        <hr style="border: 0; border-top: 1px solid var(--border-subtle); margin-bottom: 1.5rem;">
+                        <p style="font-size: 0.95rem; margin-bottom: 1rem;">Building the cognitive habits required for
+                            logical reasoning and mathematical confidence.</p>
+                        <p style="font-size: 0.85rem; opacity: 0.7;">Uses controlled environments in Minecraft Education
+                            to
+                            teach spatial reasoning.</p>
+                    </div>
+                </div>
+
+                <!-- Card 2: Scratch -->
+                <div class="card reveal-on-scroll delay-1">
+                    <img src="assets/images/Scratch.jpg" alt="Child building visual block code" class="card-img">
+                    <div class="card-content">
+                        <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Scratch & Visual Logic</h3>
+                        <p class="text-muted"
+                            style="font-size: 0.9rem; margin-bottom: 1.5rem; text-transform: uppercase; letter-spacing: 0.05em;">
+                            Block Programming</p>
+                        <hr style="border: 0; border-top: 1px solid var(--border-subtle); margin-bottom: 1.5rem;">
+                        <p style="font-size: 0.95rem; margin-bottom: 1rem;">Focusing on algorithmic thinking without
+                            syntax
+                            errors.</p>
+                        <p style="font-size: 0.85rem; opacity: 0.7;">Students build complex animations and game logic
+                            using
+                            drag-and-drop code blocks.</p>
+                    </div>
+                </div>
+
+                <!-- Card 3: Logic & Computing -->
+                <div class="card reveal-on-scroll delay-2">
+                    <img src="assets/images/Logic.jpg" alt="Transition from blocks to typed code" class="card-img">
+                    <div class="card-content">
+                        <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Logic & Computing</h3>
+                        <p class="text-muted"
+                            style="font-size: 0.9rem; margin-bottom: 1.5rem; text-transform: uppercase; letter-spacing: 0.05em;">
+                            Syntax Transition</p>
+                        <hr style="border: 0; border-top: 1px solid var(--border-subtle); margin-bottom: 1.5rem;">
+                        <p style="font-size: 0.95rem; margin-bottom: 1rem;">Transitioning from blocks to typed syntax
+                            (Python), focusing on code structure.</p>
+                        <p style="font-size: 0.85rem; opacity: 0.7;">Introduction to script-based logic via Roblox
+                            Studio
+                            (Lua).</p>
+                    </div>
+                </div>
+
+                <!-- Card 4: Mathematics (NEW) -->
+                <div class="card reveal-on-scroll delay-3">
+                    <img src="assets/images/Maths.jpg" alt="Child exploring mathematics and geometry" class="card-img">
+                    <div class="card-content">
+                        <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Mathematics (Gr 1-10)</h3>
+                        <p class="text-muted"
+                            style="font-size: 0.9rem; margin-bottom: 1.5rem; text-transform: uppercase; letter-spacing: 0.05em;">
+                            Core & Boards</p>
+                        <hr style="border: 0; border-top: 1px solid var(--border-subtle); margin-bottom: 1.5rem;">
+                        <p style="font-size: 0.95rem; margin-bottom: 1rem;">Complete coverage from Primary Numeracy to
+                            IGCSE
+                            / GCSE mastery.</p>
+                        <p style="font-size: 0.85rem; opacity: 0.7;">Focus on mental math, applied algebra, geometry,
+                            and
+                            rigorous exam technique.</p>
+                    </div>
+                </div>
+
+                <!-- Card 5: AI & ML -->
+                <div class="card reveal-on-scroll delay-3">
+                    <img src="assets/images/AI.jpg" alt="Futuristic AI interface and human interaction"
+                        class="card-img">
+                    <div class="card-content">
+                        <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">AI & Machine Learning</h3>
+                        <p class="text-muted"
+                            style="font-size: 0.9rem; margin-bottom: 1.5rem; text-transform: uppercase; letter-spacing: 0.05em;">
+                            Future Tech</p>
+                        <hr style="border: 0; border-top: 1px solid var(--border-subtle); margin-bottom: 1.5rem;">
+                        <p style="font-size: 0.95rem; margin-bottom: 1rem;">Demystifying neural networks and data
+                            science
+                            through age-appropriate tools.</p>
+                        <p style="font-size: 0.85rem; opacity: 0.7;">Understanding how AI learns patterns and making
+                            ethical
+                            technology decisions.</p>
+                    </div>
+                </div>
+
+                <!-- Card 6: GenAI (NEW) -->
+                <div class="card reveal-on-scroll delay-1">
+                    <img src="assets/images/GenAI.jpg" alt="No-code AI development and agent creation" class="card-img">
+                    <div class="card-content">
+                        <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">GenAI Development</h3>
+                        <p class="text-muted"
+                            style="font-size: 0.9rem; margin-bottom: 1.5rem; text-transform: uppercase; letter-spacing: 0.05em;">
+                            No-Code Tools</p>
+                        <hr style="border: 0; border-top: 1px solid var(--border-subtle); margin-bottom: 1.5rem;">
+                        <p style="font-size: 0.95rem; margin-bottom: 1rem;">Building advanced AI agents and assets using
+                            no-code toolchains.</p>
+                        <p style="font-size: 0.85rem; opacity: 0.7;">Mastering Prompt Engineering, Workflow Automation,
+                            and
+                            LLM fine-tuning.</p>
+                    </div>
+                </div>
+
+                <!-- Card 7: CS -->
+                <div class="card reveal-on-scroll delay-2">
+                    <img src="assets/images/computer-science-rigour.jpg"
+                        alt="Student engaging with advanced computer science concepts" class="card-img">
+                    <div class="card-content">
+                        <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Computer Science</h3>
+                        <p class="text-muted"
+                            style="font-size: 0.9rem; margin-bottom: 1.5rem; text-transform: uppercase; letter-spacing: 0.05em;">
+                            Academic Rigour</p>
+                        <hr style="border: 0; border-top: 1px solid var(--border-subtle); margin-bottom: 1.5rem;">
+                        <p style="font-size: 0.95rem; margin-bottom: 1rem;">Rigorous academic computer science, data
+                            structures, and web architecture.</p>
+                        <p style="font-size: 0.85rem; opacity: 0.7;">Full alignment with pre-college requirements.</p>
+                    </div>
+                </div>
+
+                <!-- Card 8: IGCSE -->
+                <div class="card reveal-on-scroll delay-1">
+                    <img src="assets/images/IGCSE.jpg" alt="Student preparing for IGCSE and IB exams with digital tools"
+                        class="card-img">
+                    <div class="card-content">
+                        <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">IGCSE / IB Track</h3>
+                        <p class="text-muted"
+                            style="font-size: 0.9rem; margin-bottom: 1.5rem; text-transform: uppercase; letter-spacing: 0.05em;">
+                            Exam Preparation</p>
+                        <hr style="border: 0; border-top: 1px solid var(--border-subtle); margin-bottom: 1.5rem;">
+                        <p style="font-size: 0.95rem; margin-bottom: 1rem;">Targeted preparation for Computer Science
+                            papers
+                            with focus on high-scoring answers.</p>
+                        <p style="font-size: 0.85rem; opacity: 0.7;">Mock exams, past paper analysis, and theoretical
+                            mastery.</p>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- 4. The EDVERA Method -->
+    <section id="method" class="section bg-alt">
+        <div class="container">
+            <h2 class="reveal-on-scroll" style="font-size: 2.5rem; margin-bottom: 3rem;">The EDVERA Method</h2>
+
+            <div class="grid" style="grid-template-columns: repeat(4, 1fr); gap: 2rem;">
+                <div class="reveal-on-scroll">
+                    <span
+                        style="display: block; font-family: var(--font-serif); font-size: 3rem; color: var(--color-primary); margin-bottom: 1rem; opacity: 0.2;">01</span>
+                    <h4 style="font-size: 1.2rem; margin-bottom: 0.5rem;">Diagnostic</h4>
+                    <p style="font-size: 0.9rem; opacity: 0.8;">We assess current cognitive standing and logic gaps
+                        before teaching starts.</p>
+                </div>
+                <div class="reveal-on-scroll delay-1">
+                    <span
+                        style="display: block; font-family: var(--font-serif); font-size: 3rem; color: var(--color-primary); margin-bottom: 1rem; opacity: 0.2;">02</span>
+                    <h4 style="font-size: 1.2rem; margin-bottom: 0.5rem;">Blueprint</h4>
+                    <p style="font-size: 0.9rem; opacity: 0.8;">A personalised 6-12 month roadmap tailored to the
+                        student’s pace and targets.</p>
+                </div>
+                <div class="reveal-on-scroll delay-2">
+                    <span
+                        style="display: block; font-family: var(--font-serif); font-size: 3rem; color: var(--color-primary); margin-bottom: 1rem; opacity: 0.2;">03</span>
+                    <h4 style="font-size: 1.2rem; margin-bottom: 0.5rem;">1:1 Instruction</h4>
+                    <p style="font-size: 0.9rem; opacity: 0.8;">Undivided attention from senior mentors. No batches. No
+                        distractions.</p>
+                </div>
+                <div class="reveal-on-scroll delay-3">
+                    <span
+                        style="display: block; font-family: var(--font-serif); font-size: 3rem; color: var(--color-primary); margin-bottom: 1rem; opacity: 0.2;">04</span>
+                    <h4 style="font-size: 1.2rem; margin-bottom: 0.5rem;">Progress Review</h4>
+                    <p style="font-size: 0.9rem; opacity: 0.8;">Quarterly deep-dive feedback sessions for parents on
+                        intellectual development.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Quiet Differentiators -->
+    <section class="section">
+        <div class="container grid" style="grid-template-columns: 1fr 1fr; gap: 4rem;">
+            <div class="reveal-on-scroll">
+                <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Quiet Authority.</h2>
+                <div style="height: 2px; width: 60px; background: var(--color-primary); margin-bottom: 2rem;"></div>
+            </div>
+            <div class="grid" style="gap: 2rem;">
+                <div class="reveal-on-scroll delay-1">
+                    <h5 style="font-size: 1.1rem; margin-bottom: 0.5rem;">1:1 Only. No Batches.</h5>
+                    <p class="text-muted">Education is personal. We strictly avoid the factory-model of batch learning.
+                    </p>
+                </div>
+                <div class="reveal-on-scroll delay-2">
+                    <h5 style="font-size: 1.1rem; margin-bottom: 0.5rem;">International Standards</h5>
+                    <p class="text-muted">Our curriculum is bench-marked against global IGCSE and IB standards, not just
+                        local requirements.</p>
+                </div>
+                <div class="reveal-on-scroll delay-3">
+                    <h5 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Disciplined Culture</h5>
+                    <p class="text-muted">We do not gamify learning with meaningless badges. We reward understanding.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5.5. Trusted By (Logo Marquee) -->
+    <section class="logo-marquee-section">
+        <div class="container text-center reveal-on-scroll" style="margin-bottom: 2rem;">
+            <p
+                style="font-size: 0.9rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--text-muted); font-weight: 500;">
+                Trusted by parents from
+            </p>
+        </div>
+        <div class="logo-marquee-container">
+            <div class="logo-marquee-track">
+                <!-- Original Set -->
+                <img src="assets/images/logos/goldman.png" alt="Goldman Sachs" class="logo-item">
+                <img src="assets/images/logos/meta.png" alt="Meta" class="logo-item">
+                <img src="assets/images/logos/salesforce.png" alt="Salesforce" class="logo-item">
+                <img src="assets/images/logos/deloitte.png" alt="Deloitte" class="logo-item">
+                <img src="assets/images/logos/bcg.png" alt="BCG" class="logo-item">
+                <img src="assets/images/logos/microsoft.png" alt="Microsoft" class="logo-item">
+                <img src="assets/images/logos/bain.jpg" alt="Bain & Company" class="logo-item">
+                <img src="assets/images/logos/amazon.jpg" alt="Amazon" class="logo-item">
+
+                <!-- Duplicate Set for Infinite Scroll -->
+                <img src="assets/images/logos/goldman.png" alt="Goldman Sachs" class="logo-item">
+                <img src="assets/images/logos/meta.png" alt="Meta" class="logo-item">
+                <img src="assets/images/logos/salesforce.png" alt="Salesforce" class="logo-item">
+                <img src="assets/images/logos/deloitte.png" alt="Deloitte" class="logo-item">
+                <img src="assets/images/logos/bcg.png" alt="BCG" class="logo-item">
+                <img src="assets/images/logos/microsoft.png" alt="Microsoft" class="logo-item">
+                <img src="assets/images/logos/bain.jpg" alt="Bain & Company" class="logo-item">
+                <img src="assets/images/logos/amazon.jpg" alt="Amazon" class="logo-item">
+
+                <!-- Duplicate Set 2 for Infinite Scroll safety on wide screens -->
+                <img src="assets/images/logos/goldman.png" alt="Goldman Sachs" class="logo-item">
+                <img src="assets/images/logos/meta.png" alt="Meta" class="logo-item">
+                <img src="assets/images/logos/salesforce.png" alt="Salesforce" class="logo-item">
+                <img src="assets/images/logos/deloitte.png" alt="Deloitte" class="logo-item">
+                <img src="assets/images/logos/bcg.png" alt="BCG" class="logo-item">
+                <img src="assets/images/logos/microsoft.png" alt="Microsoft" class="logo-item">
+                <img src="assets/images/logos/bain.jpg" alt="Bain & Company" class="logo-item">
+                <img src="assets/images/logos/amazon.jpg" alt="Amazon" class="logo-item">
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. How We Use Modern Tools -->
+    <section class="section" style="background-color: var(--color-navy); color: white;">
+        <div class="container grid" style="grid-template-columns: 1.2fr 0.8fr; gap: 4rem; align-items: center;">
+            <div class="reveal-on-scroll">
+                <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem; color: white;">Tools for Thinking</h2>
+                <p style="opacity: 0.9; margin-bottom: 1.5rem; max-width: 600px;">
+                    Platforms such as Minecraft and Roblox are commonly perceived as sources of distraction. At EDVERA,
+                    we reframe them as controlled intellectual environments.
+                </p>
+                <p style="opacity: 0.9; max-width: 600px;">
+                    By removing the entertainment layer, we leverage their underlying physics, logic, and systems
+                    architecture to teach structured reasoning, circuit logic, and spatial problem-solving with clear
+                    academic intent and discipline.
+                </p>
+            </div>
+            <div class="reveal-on-scroll delay-2"
+                style="background: rgba(255,255,255,0.05); padding: 2rem; border-left: 2px solid rgba(255,255,255,0.2);">
+                <p style="font-family: var(--font-serif); font-style: italic; font-size: 1.2rem; margin-bottom: 1rem;">
+                    "The goal is not to play. The goal is to build, understand, and debug."
+                </p>
+                <p style="font-size: 0.9rem; opacity: 0.7;">— Academic Philosophy</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 7. Outcomes -->
+    <section id="outcomes" class="section">
+        <div class="container text-center reveal-on-scroll" style="margin-bottom: 3rem;">
+            <h2 style="font-size: 2.5rem;">Outcomes</h2>
+        </div>
+        <div class="container grid" style="grid-template-columns: repeat(3, 1fr); text-align: center; gap: 3rem;">
+            <div class="reveal-on-scroll">
+                <h3 style="margin-bottom: 1rem;">Clarity</h3>
+                <p class="text-muted">The ability to deconstruct complex problems into manageable logical steps.</p>
+            </div>
+            <div class="reveal-on-scroll delay-1">
+                <h3 style="margin-bottom: 1rem;">Confidence</h3>
+                <p class="text-muted">Intellectual self-assurance that comes from mastering difficult concepts.</p>
+            </div>
+            <div class="reveal-on-scroll delay-2">
+                <h3 style="margin-bottom: 1rem;">Structure</h3>
+                <p class="text-muted">A disciplined approach to thinking that serves across all academic subjects.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Faculty -->
+    <section id="faculty" class="section bg-alt">
+        <div class="container reveal-on-scroll">
+            <h2 style="font-size: 2.5rem; margin-bottom: 2rem;">Faculty & Academic Culture</h2>
+            <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 4rem;">
+                <div>
+                    <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem;">
+                        Our faculty consists of experienced educators with 5–10+ years of teaching and mentoring
+                        experience, alongside industry professionals and academic researchers.
+                    </p>
+                    <p style="font-size: 1.1rem; line-height: 1.8;">
+                        They bring rigour from backgrounds including IIT Madras, IIT Bombay, UCL, and University of
+                        Bristol, VIT, Jadavpur University balanced with industry exposure from Deloitte, Amazon, BCG,
+                        Salesforce and many more.
+                    </p>
+                </div>
+                <div
+                    style="display: flex; align-items: center; justify-content: center; border: 1px solid var(--border-subtle); background: var(--bg-card); padding: 2rem;">
+                    <p style="font-family: var(--font-serif); font-size: 1.25rem; text-align: center;">
+                        "We hire for patience, academic depth, and the ability to mentor."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. Parents Section -->
+    <section class="logo-marquee-section" style="border-top: 1px solid var(--border-subtle); border-bottom: 0;">
+        <div class="container text-center reveal-on-scroll" style="margin-bottom: 2rem;">
+            <p
+                style="font-size: 0.9rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--text-muted); font-weight: 500;">
+                Curriculum Designed & Instructors From
+            </p>
+        </div>
+        <div class="logo-marquee-container">
+            <div class="logo-marquee-track">
+                <!-- Set 1 -->
+                <img src="assets/images/logos/oxford.png" alt="University of Oxford" class="logo-item"
+                    style="height: 60px;">
+                <img src="assets/images/logos/michigan.png" alt="University of Michigan" class="logo-item"
+                    style="height: 60px;">
+                <img src="assets/images/logos/washington.png" alt="University of Washington" class="logo-item"
+                    style="height: 50px;">
+                <img src="assets/images/logos/iitm.png" alt="IIT Madras" class="logo-item"
+                    style="height: 60px;">
+                <img src="assets/images/logos/iitr.png" alt="IIT Roorkee" class="logo-item"
+                    style="height: 60px;">
+                <img src="assets/images/logos/iith.png" alt="IIT Hyderabad" class="logo-item"
+                    style="height: 50px;">
+
+                <!-- Set 2 -->
+                <img src="assets/images/logos/oxford.png" alt="University of Oxford" class="logo-item"
+                    style="height: 60px;">
+                <img src="assets/images/logos/michigan.png" alt="University of Michigan" class="logo-item"
+                    style="height: 60px;">
+                <img src="assets/images/logos/washington.png" alt="University of Washington" class="logo-item"
+                    style="height: 50px;">
+                <img src="assets/images/logos/iitm.png" alt="IIT Madras" class="logo-item"
+                    style="height: 60px;">
+                <img src="assets/images/logos/iitr.png" alt="IIT Roorkee" class="logo-item"
+                    style="height: 60px;">
+                <img src="assets/images/logos/iith.png" alt="IIT Hyderabad" class="logo-item"
+                    style="height: 50px;">
+
+                <!-- Set 3 -->
+                <img src="assets/images/logos/oxford.png" alt="University of Oxford" class="logo-item"
+                    style="height: 60px;">
+                <img src="assets/images/logos/michigan.png" alt="University of Michigan" class="logo-item"
+                    style="height: 60px;">
+                <img src="assets/images/logos/washington.png" alt="University of Washington" class="logo-item"
+                    style="height: 50px;">
+                <img src="assets/images/logos/iitm.png" alt="IIT Madras" class="logo-item"
+                    style="height: 60px;">
+                <img src="assets/images/logos/iitr.png" alt="IIT Roorkee" class="logo-item"
+                    style="height: 60px;">
+                <img src="assets/images/logos/iith.png" alt="IIT Hyderabad" class="logo-item"
+                    style="height: 50px;">
+
+                <!-- Set 4 -->
+                <img src="assets/images/logos/oxford.png" alt="University of Oxford" class="logo-item"
+                    style="height: 60px;">
+                <img src="assets/images/logos/michigan.png" alt="University of Michigan" class="logo-item"
+                    style="height: 60px;">
+                <img src="assets/images/logos/washington.png" alt="University of Washington" class="logo-item"
+                    style="height: 50px;">
+                <img src="assets/images/logos/iitm.png" alt="IIT Madras" class="logo-item"
+                    style="height: 60px;">
+                <img src="assets/images/logos/iitr.png" alt="IIT Roorkee" class="logo-item"
+                    style="height: 60px;">
+                <img src="assets/images/logos/iith.png" alt="IIT Hyderabad" class="logo-item"
+                    style="height: 50px;">
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. Parents Section -->
+    <section id="parents" class="section">
+        <div class="container reveal-on-scroll" style="max-width: 900px;">
+            <div style="border-left: 3px solid var(--color-primary); padding-left: 2rem;">
+                <h2 style="font-size: 2.25rem; margin-bottom: 1.5rem;">For Parents</h2>
+                <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">
+                    EDVERA is designed for families who value long-term development over quick fixes. We are not a
+                    coding bootcamp. We do not promise that your child will build the next big app in 3 weeks.
+                </p>
+                <p style="font-size: 1.1rem;">
+                    We promise a structured, serious environment where intellectual growth is nurtured with patience and
+                    high standards. We expect parents to partner with us in maintaining this discipline.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. Primary Conversion Block -->
+    <section class="section" style="padding: 6rem 0; text-align: center;">
+        <div class="container reveal-on-scroll">
+            <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Begin with a Diagnostic.</h2>
+            <p style="max-width: 600px; margin: 0 auto 2.5rem; opacity: 0.8;">
+                Book a 45-minute consultative session to assess your child’s current logical standing and discuss a
+                personalised academic blueprint.
+            </p>
+            <div class="flex" style="justify-content: center; gap: 1.5rem;">
+                <a href="#" class="btn btn-primary js-open-diagnostic">Book Free Diagnostic & Placement</a>
+            </div>
+            <p style="margin-top: 1.5rem; font-size: 0.85rem; opacity: 0.6;">Restricted intake for quality assurance.
+            </p>
+        </div>
+    </section>
+
+    <!-- 11. Footer -->
+    <footer
+        style="padding: 4rem 0; background-color: var(--color-bg-light); border-top: 1px solid var(--border-subtle);">
+        <div class="container grid" style="grid-template-columns: 1fr 1fr; gap: 2rem;">
+            <div>
+                <a href="#" class="nav-logo" style="display: block; margin-bottom: 1rem;">EDVERA</a>
+                <p style="font-size: 0.9rem; opacity: 0.7; max-width: 300px;">
+                    Personalised education for the intellectually curious.
+                </p>
+            </div>
+            <div style="text-align: right;">
+                <div style="margin-bottom: 1.5rem;">
+                    <a href="faq.html" class="hover-link" style="font-size: 0.9rem; font-weight: 500;">Parent FAQ</a>
+                </div>
+                <p style="font-size: 0.9rem; margin-bottom: 0.5rem; font-weight: 600;">Contact</p>
+                <a href="mailto:admissions@edvera.org" class="hover-link"
+                    style="font-size: 0.9rem; opacity: 0.7;">admissions@edvera.org</a>
+            </div>
+        </div>
+        <div class="container"
+            style="margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border-subtle); display: flex; justify-content: space-between; font-size: 0.8rem; opacity: 0.5;">
+            <span>&copy; 2026 EDVERA Education. All rights reserved.</span>
+            <span>IGCSE &bull; GCSE &bull; IB Support</span>
+        </div>
+    </footer>
+
+    <!-- Diagnostic Modal -->
+    <div id="diagnostic-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <div class="modal-header">
+                <h3>Book Free Diagnostic Session</h3>
+                <p>Please share your details to schedule a session.</p>
+            </div>
+            <form id="diagnostic-form">
+                <div class="form-group">
+                    <label for="parent-name" class="form-label">Parent's Name <span class="required">*</span></label>
+                    <input type="text" id="parent-name" class="form-input" placeholder="Enter your full name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email" class="form-label">Email Address <span class="required">*</span></label>
+                    <input type="email" id="email" class="form-input" placeholder="name@example.com" required>
+                </div>
+
+                <!-- Removed Contact Number as per request -->
+
+                <div class="form-group" style="margin-top: 1.5rem;">
+                    <label class="form-label">Select Child's Age</label>
+                    <input type="hidden" id="learner-age" name="learner-age">
+                    <div class="age-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.5rem;">
+                        <button type="button" class="age-btn" data-value="5">Age 5</button>
+                        <button type="button" class="age-btn" data-value="6">Age 6</button>
+                        <button type="button" class="age-btn" data-value="7">Age 7</button>
+                        <button type="button" class="age-btn" data-value="8">Age 8</button>
+                        <button type="button" class="age-btn" data-value="9">Age 9</button>
+                        <button type="button" class="age-btn" data-value="10">Age 10</button>
+                        <button type="button" class="age-btn" data-value="11">Age 11</button>
+                        <button type="button" class="age-btn" data-value="12">Age 12</button>
+                        <button type="button" class="age-btn" data-value="13">Age 13</button>
+                        <button type="button" class="age-btn" data-value="14">Age 14</button>
+                        <button type="button" class="age-btn" data-value="15+">Age 15+</button>
+                    </div>
+                </div>
+
+                <div class="form-group" style="margin-top: 1.5rem;">
+                    <label for="learner-name" class="form-label">Learner's Name <span
+                            class="optional">(Optional)</span></label>
+                    <input type="text" id="learner-name" class="form-input" placeholder="Child's name">
+                </div>
+
+                <div class="form-group">
+                    <label for="comments" class="form-label">Additional Comments <span
+                            class="optional">(Optional)</span></label>
+                    <textarea id="comments" class="form-textarea"
+                        placeholder="Any specific learning goals or concerns?"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary"
+                    style="width: 100%; background-color: var(--accent-amber); border-color: var(--accent-amber); color: #0E0E12; font-weight: 600;">Book
+                    a Diagnostic</button>
+            </form>
+
+            <div id="diagnostic-success" style="display: none; text-align: center; padding: 2rem 0;">
+                <div style="font-size: 3rem; color: var(--accent-teal); margin-bottom: 1rem;">&#10003;</div>
+                <h3 style="margin-bottom: 0.5rem;">Request Received</h3>
+                <p style="color: var(--text-muted); margin-bottom: 2rem;">
+                    Thank you for sharing your details. Our academic team will review your profile and contact you
+                    shortly to schedule the diagnostic session.
+                </p>
+                <button class="btn btn-secondary js-close-modal">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

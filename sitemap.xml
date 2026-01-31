@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Homepage -->
+  <url>
+    <loc>https://www.edvera.com/index.html</loc>
+    <lastmod>2026-01-30</lastmod>
+    <priority>1.00</priority>
+  </url>
+  
+  <!-- Core Academic Pages -->
+  <url>
+    <loc>https://www.edvera.com/programs.html</loc>
+    <lastmod>2026-01-30</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.edvera.com/method.html</loc>
+    <lastmod>2026-01-30</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.edvera.com/journeys.html</loc>
+    <lastmod>2026-01-30</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Information & Trust -->
+  <url>
+    <loc>https://www.edvera.com/parents.html</loc>
+    <lastmod>2026-01-30</lastmod>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://www.edvera.com/faq.html</loc>
+    <lastmod>2026-01-30</lastmod>
+    <priority>0.60</priority>
+  </url>
+
+  <!-- Tools -->
+  <url>
+    <loc>https://www.edvera.com/ed-lab.html</loc>
+    <lastmod>2026-01-30</lastmod>
+    <priority>0.60</priority>
+  </url>
+</urlset>

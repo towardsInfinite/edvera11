@@ -1,0 +1,906 @@
+/* EDVERA - Premium Education Global Brand */
+/* Design System & Variables */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+
+:root {
+    /* Palette - Base */
+    --color-navy: #0B1C2D;
+    /* Deep Academic Navy */
+    --color-ivory: #F6F5F2;
+    /* Ivory Off-White */
+    --color-dark: #0E0E12;
+    /* Deep near-black (Dark Mode Canvas) */
+    --color-dark-sec: #14141B;
+    /* Secondary Dark (Cards) */
+
+    /* Accents */
+    --accent-teal: #5FA6A6;
+    --accent-amber: #D4B15A;
+    --accent-violet: #8A7FBF;
+    --accent-platinum: #C7C9CC;
+
+    /* Semantic - Light Mode Default */
+    --bg-page: var(--color-ivory);
+    --bg-alt: #F8F8F8;
+    --bg-card: #FFFFFF;
+    --bg-nav: rgba(246, 245, 242, 0.95);
+
+    --text-main: #121212;
+    --text-muted: #666666;
+    --text-inverse: #FFFFFF;
+
+    --border-subtle: rgba(11, 28, 45, 0.1);
+    --border-hover: rgba(11, 28, 45, 0.2);
+
+    --primary-brand: var(--color-navy);
+    /* Used for text links/highlights in light mode */
+
+    /* Typography */
+    --font-serif: 'Playfair Display', serif;
+    --font-sans: 'Inter', sans-serif;
+
+    /* Spacing */
+    --spacing-container: 1200px;
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 4rem;
+    --spacing-xl: 8rem;
+
+    /* Motion Constants */
+    --ease-breath: cubic-bezier(0.22, 1, 0.36, 1);
+    --duration-hover: 220ms;
+    --duration-reveal: 360ms;
+    --duration-card: 240ms;
+}
+
+/* Dark Mode Logic */
+[data-theme="dark"] {
+    --bg-page: #0E0E12;
+    --bg-alt: #121216;
+    --bg-card: #14141B;
+    --bg-nav: rgba(14, 14, 18, 0.95);
+
+    --text-main: #F5F5F7;
+    --text-muted: #B8BCC6;
+    --text-inverse: #121212;
+
+    --border-subtle: rgba(255, 255, 255, 0.06);
+    --border-hover: rgba(255, 255, 255, 0.12);
+
+    --primary-brand: #F5F5F7;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+        --bg-page: #0E0E12;
+        --bg-alt: #121216;
+        --bg-card: #14141B;
+        --bg-nav: rgba(14, 14, 18, 0.95);
+
+        --text-main: #F5F5F7;
+        --text-muted: #B8BCC6;
+        --text-inverse: #121212;
+
+        --border-subtle: rgba(255, 255, 255, 0.06);
+        --border-hover: rgba(255, 255, 255, 0.12);
+
+        --primary-brand: #F5F5F7;
+    }
+}
+
+/* Reset & Base */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: var(--font-sans);
+    font-size: 16px;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    background-color: var(--bg-page);
+    color: var(--text-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+    transition: background-color 0.3s var(--ease-breath), color 0.3s var(--ease-breath);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    color: var(--text-main);
+    line-height: 1.2;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+    transition: color var(--duration-hover) var(--ease-breath);
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Utilities */
+.container {
+    max-width: var(--spacing-container);
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+    width: 100%;
+}
+
+.section {
+    padding: var(--spacing-xl) 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.flex {
+    display: flex;
+}
+
+.grid {
+    display: grid;
+}
+
+.bg-alt {
+    background-color: var(--bg-alt);
+}
+
+.hidden {
+    display: none;
+}
+
+.text-muted {
+    color: var(--text-muted) !important;
+}
+
+/* Components: Buttons / CTAs */
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    border: 1px solid var(--text-main);
+    cursor: pointer;
+    transition: all var(--duration-hover) var(--ease-breath);
+    background: transparent;
+    color: var(--text-main);
+}
+
+.btn-primary {
+    background: var(--text-main);
+    color: var(--bg-page);
+    /* Dynamic inverse */
+    border-color: var(--text-main);
+}
+
+/* Update for Dark Mode specific button visibility if needed */
+[data-theme="dark"] .btn-primary {
+    background: var(--text-main);
+    color: #0E0E12;
+    /* Hardcode dark text on white btn */
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .btn-primary {
+        color: #0E0E12;
+    }
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.btn-secondary {
+    border-color: var(--border-subtle);
+}
+
+.btn-secondary:hover {
+    border-color: var(--text-main);
+    transform: translateY(-2px);
+}
+
+/* Hover Link Effect */
+.hover-link {
+    position: relative;
+    display: inline-block;
+}
+
+.hover-link::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background-color: var(--accent-teal);
+    /* Accent interaction */
+    transition: width var(--duration-hover) var(--ease-breath);
+}
+
+.hover-link:hover {
+    color: var(--text-main);
+}
+
+.hover-link:hover::after {
+    width: 100%;
+}
+
+/* Cards */
+/* Ambient Dark Hover Effect */
+.card {
+    background: var(--bg-card);
+    padding: 2.5rem;
+    border: 1px solid var(--border-subtle);
+    border-left: 1px solid var(--border-subtle);
+    border-radius: 4px;
+    overflow: hidden;
+    /* Ensure image stays within corners */
+    padding: 0;
+    /* padding handled by inner content wrapper now if needed, or we mix */
+    display: flex;
+    flex-direction: column;
+
+    /* Smooth transition for all color properties */
+    transition:
+        transform var(--duration-card) var(--ease-breath),
+        box-shadow var(--duration-card) var(--ease-breath),
+        border-color var(--duration-card) var(--ease-breath),
+        background-color var(--duration-card) var(--ease-breath),
+        color var(--duration-card) var(--ease-breath);
+}
+
+.card-img {
+    width: 100%;
+    /* Remove fixed height to prevent bad cropping of text */
+    height: auto;
+    /* Allow natural height */
+    display: block;
+    border-bottom: 1px solid var(--border-subtle);
+    /* Focus on the top part (heads/text usually) */
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.card-content {
+    padding: 2.5rem;
+    flex: 1;
+}
+
+.card h3,
+.card p,
+.card .text-muted,
+.card hr {
+    transition: color var(--duration-card) var(--ease-breath), border-color var(--duration-card) var(--ease-breath), opacity var(--duration-card) var(--ease-breath);
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+    /* Slightly deeper shadow */
+
+    /* The Magic Switch: Force dark background on hover */
+    background-color: var(--color-navy);
+    border-color: var(--color-navy);
+    border-left: 3px solid var(--accent-amber);
+}
+
+/* Force text to white/light on hover */
+.card:hover h3,
+.card:hover p {
+    color: #F5F5F7 !important;
+}
+
+.card:hover .text-muted {
+    color: rgba(245, 245, 247, 0.7) !important;
+}
+
+.card:hover hr {
+    border-top-color: rgba(245, 245, 247, 0.2);
+}
+
+/* Dark Mode Specific Tweaks for Hover */
+[data-theme="dark"] .card:hover {
+    background-color: var(--bg-alt);
+    /* Slightly lighter/different in dark mode to show lift */
+    border-color: var(--border-hover);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .card:hover {
+        background-color: var(--bg-alt);
+        border-color: var(--border-hover);
+    }
+}
+
+/* Remove the old white-text-on-hover logic */
+.card:hover h3,
+.card:hover p,
+.card:hover .text-muted {
+    color: inherit;
+}
+
+/* Navigation */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: var(--bg-nav);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-subtle);
+    padding: 1.2rem 0;
+    transition: padding 300ms var(--ease-breath);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    letter-spacing: -0.02em;
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+.nav-links {
+    display: flex;
+    gap: 2.5rem;
+    align-items: center;
+    /* Vertical center for toggle */
+}
+
+.nav-links a {
+    font-size: 0.9rem;
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+.nav-links a:hover {
+    opacity: 1;
+}
+
+/* Theme Toggle Button */
+.theme-toggle-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    color: var(--text-main);
+    opacity: 0.7;
+    transition: opacity 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.theme-toggle-btn:hover {
+    opacity: 1;
+}
+
+/* Animations */
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity var(--duration-reveal) var(--ease-breath), transform var(--duration-reveal) var(--ease-breath);
+}
+
+.reveal-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Stagger delays */
+.delay-1 {
+    transition-delay: 60ms;
+}
+
+.delay-2 {
+    transition-delay: 120ms;
+}
+
+.delay-3 {
+    transition-delay: 180ms;
+}
+
+/* Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(11, 28, 45, 0.6);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 2000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--duration-reveal) var(--ease-breath);
+}
+
+.modal-content {
+    background: var(--bg-card);
+    width: 90%;
+    max-width: 500px;
+    padding: 2.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-subtle);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+    transform: translateY(20px);
+    transition: transform var(--duration-reveal) var(--ease-breath);
+    position: relative;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.modal-overlay.is-active,
+.element-is-active {
+    /* fallback/helper class */
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-overlay.is-active .modal-content {
+    transform: translateY(0);
+}
+
+.modal-close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: color 200ms;
+}
+
+.modal-close:hover {
+    color: var(--text-main);
+}
+
+.modal-header h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.modal-header p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-label {
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--text-main);
+}
+
+.form-label span.required {
+    color: #e53e3e;
+    margin-left: 2px;
+}
+
+.form-label span.optional {
+    color: var(--text-muted);
+    font-weight: 400;
+    font-size: 0.8rem;
+    margin-left: 0.3rem;
+}
+
+.form-input,
+.form-textarea,
+.form-select {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    border: 1px solid var(--border-subtle);
+    border-radius: 4px;
+    background: var(--bg-page);
+    color: var(--text-main);
+    transition: border-color var(--duration-hover), box-shadow var(--duration-hover);
+}
+
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus {
+    outline: none;
+    border-color: var(--accent-teal);
+    box-shadow: 0 0 0 3px rgba(95, 166, 166, 0.1);
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Premium Accordion (FAQ) */
+.faq-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.accordion-item {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    transition: all var(--duration-hover) var(--ease-breath);
+}
+
+.accordion-item:hover {
+    border-color: var(--text-main);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.accordion-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    color: var(--text-main);
+    transition: background-color var(--duration-hover);
+}
+
+.accordion-title {
+    font-family: var(--font-serif);
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-right: 1.5rem;
+}
+
+.accordion-icon {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+.accordion-icon::before,
+.accordion-icon::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: var(--accent-teal);
+    transition: transform 0.3s var(--ease-breath);
+}
+
+/* Horizontal line */
+.accordion-icon::before {
+    width: 100%;
+    height: 2px;
+    transform: translate(-50%, -50%);
+}
+
+/* Vertical line */
+.accordion-icon::after {
+    width: 2px;
+    height: 100%;
+    transform: translate(-50%, -50%);
+}
+
+/* Expanded State for Icon */
+.accordion-header[aria-expanded="true"] .accordion-icon::after {
+    transform: translate(-50%, -50%) rotate(90deg);
+    /* Rotates to match horizontal, making a minus? No, wait. */
+    /* If vertical rotates 90deg, it becomes horizontal. If horizontal stays, they overlap => minus sign. */
+}
+
+.accordion-header[aria-expanded="true"] .accordion-icon::before {
+    transform: translate(-50%, -50%) rotate(180deg);
+}
+
+.accordion-content {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.4s var(--ease-breath);
+}
+
+.accordion-body {
+    padding: 0 2rem 2rem 2rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    font-size: 1.05rem;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* When open, body fades in */
+.accordion-header[aria-expanded="true"]+.accordion-content .accordion-body {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.1s;
+}
+
+/* Active Styling for Item */
+.accordion-item.is-active {
+    border-color: var(--border-hover);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+/* Logo Marquee Section */
+.logo-marquee-section {
+    background-color: var(--bg-page);
+    padding: 3rem 0;
+    border-bottom: 1px solid var(--border-subtle);
+    overflow: hidden;
+}
+
+.logo-marquee-container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    padding: 1rem 0;
+}
+
+/* Gradient Masks for fade effect at edges */
+.logo-marquee-container::before,
+.logo-marquee-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 200px;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.logo-marquee-container::before {
+    left: 0;
+    background: linear-gradient(to right, var(--bg-page), transparent);
+}
+
+.logo-marquee-container::after {
+    right: 0;
+    background: linear-gradient(to left, var(--bg-page), transparent);
+}
+
+.logo-marquee-track {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    width: max-content;
+    animation: scroll 30s linear infinite;
+}
+
+.logo-item {
+    height: 45px;
+    /* Fixed height for consistency */
+    width: auto;
+    opacity: 0.5;
+    /* Subtle by default */
+    filter: grayscale(100%);
+    transition: opacity 0.3s, filter 0.3s;
+}
+
+.logo-item:hover {
+    opacity: 1;
+    filter: grayscale(0%);
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-50% - 2rem));
+        /* Scroll half the track (original set) */
+    }
+}
+
+/* Dark Mode adjustment for gradients */
+[data-theme="dark"] .logo-marquee-container::before {
+    background: linear-gradient(to right, var(--bg-page), transparent);
+}
+
+[data-theme="dark"] .logo-marquee-container::after {
+    background: linear-gradient(to left, var(--bg-page), transparent);
+}
+
+[data-theme="dark"] .logo-item {
+    filter: grayscale(100%) invert(1) brightness(0.8);
+}
+
+[data-theme="dark"] .logo-item:hover {
+    filter: grayscale(0%) invert(0) brightness(1);
+    /* Return to color is tricky in dark mode if logos are dark. 
+                                                     better to keep them white/bright */
+    filter: brightness(1);
+    opacity: 1;
+}
+
+/* Mobile Navigation */
+.mobile-nav-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 1100;
+    color: var(--text-main);
+}
+
+.mobile-nav-toggle svg {
+    width: 24px;
+    height: 24px;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+@media (max-width: 1024px) {
+    .nav-container {
+        justify-content: space-between;
+        position: relative;
+    }
+
+    .mobile-nav-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        max-width: 100%;
+        height: 100vh;
+        background-color: var(--bg-page);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+        padding: 2rem;
+        transform: translateX(100%);
+        transition: transform 0.4s var(--ease-breath), opacity 0.4s ease;
+        z-index: 1050;
+        opacity: 0;
+        pointer-events: none;
+        overflow-y: auto;
+    }
+
+    .nav-links.active {
+        transform: translateX(0);
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .nav-links a {
+        font-size: 1.5rem;
+        font-family: var(--font-serif);
+        opacity: 0;
+        transform: translateY(10px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .nav-links.active a {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* Staggered animation for links */
+    .nav-links.active a:nth-child(1) {
+        transition-delay: 0.1s;
+    }
+
+    .nav-links.active a:nth-child(2) {
+        transition-delay: 0.15s;
+    }
+
+    .nav-links.active a:nth-child(3) {
+        transition-delay: 0.2s;
+    }
+
+    .nav-links.active a:nth-child(4) {
+        transition-delay: 0.25s;
+    }
+
+    .nav-links.active a:nth-child(5) {
+        transition-delay: 0.3s;
+    }
+
+    .nav-links.active a:nth-child(6) {
+        transition-delay: 0.35s;
+    }
+
+    .nav-links.active a:nth-child(7) {
+        transition-delay: 0.4s;
+    }
+
+    /* Theme toggle adjustment in mobile menu */
+    .theme-toggle-btn {
+        margin-top: 1rem;
+        transform: scale(1.2);
+    }
+}
+
+/* Diagnostic Modal Age Buttons */
+.age-btn {
+    padding: 0.8rem 0.5rem;
+    background: var(--bg-page);
+    border: 1px solid var(--border-subtle);
+    border-radius: 4px;
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    color: var(--text-main);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.age-btn:hover {
+    border-color: var(--accent-amber);
+    background: rgba(212, 177, 90, 0.05);
+}
+
+.age-btn.selected {
+    background-color: var(--accent-amber);
+    color: #0E0E12;
+    border-color: var(--accent-amber);
+    font-weight: 600;
+}
+
+/* Ensure 4 columns look good on mobile within the modal */
+@media (max-width: 480px) {
+    .age-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+}
