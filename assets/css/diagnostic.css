@@ -1,0 +1,345 @@
+/* EDVERA Diagnostic - Premium Assessment Styles */
+
+/* Base & Typography Overrides */
+:root {
+  --nav-height: 80px;
+  --max-width-content: 800px;
+  --color-gold: #C5A065;
+  --color-success: #10B981;
+  --color-slate: #64748B;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: #F6F5F2;
+  /* Hardcoded Ivory */
+  font-family: var(--font-sans);
+
+  /* FORCE LIGHT MODE COLORS to prevent Dark Mode override from style.css */
+  --text-main: #121212 !important;
+  --text-muted: #666666 !important;
+  --color-navy: #0B1C2D !important;
+  --border-subtle: rgba(11, 28, 45, 0.1) !important;
+
+  color: #121212;
+  /* Fallback */
+}
+
+/* Navigation - Minimal */
+.diagnostic-nav {
+  height: var(--nav-height);
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+/* Main Container */
+.diagnostic-container {
+  margin-top: var(--nav-height);
+  padding: 4rem 1rem;
+  max-width: var(--max-width-content);
+  margin-left: auto;
+  margin-right: auto;
+  min-height: calc(100vh - var(--nav-height));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* Vertically center content */
+  opacity: 0;
+  /* JS will fade this in */
+  transition: opacity 0.5s ease;
+}
+
+.diagnostic-container.loaded {
+  opacity: 1;
+}
+
+/* Screen Transitions */
+.screen {
+  display: none;
+  animation: fadeIn 0.5s var(--ease-breath) forwards;
+}
+
+.screen.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Typography Helpers */
+.headline-lg {
+  font-family: var(--font-serif);
+  font-size: 2.5rem;
+  color: #0B1C2D;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.subtext {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  max-width: 600px;
+  margin-bottom: 2rem;
+}
+
+/* Form Styles */
+/* Button Overrides for Diagnostic */
+.btn-primary {
+  background-color: #0B1C2D !important;
+  /* Deep Navy */
+  color: #FFFFFF !important;
+  /* White Text */
+  border: 1px solid #0B1C2D !important;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  padding: 1.2rem 2rem;
+  /* Taller button */
+  border-radius: 4px;
+}
+
+.btn-primary:hover {
+  background-color: #1a2f47 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(11, 28, 45, 0.2);
+}
+
+/* Input Styles */
+.input-minimal {
+  border: none;
+  border-bottom: 2px solid #E5E7EB;
+  /* Lighter grey border initially */
+  background: transparent;
+  width: 100%;
+  padding: 1rem 0;
+  font-size: 1.5rem;
+  font-family: var(--font-serif);
+  color: #0B1C2D !important;
+  /* Force Navy Text */
+  margin-bottom: 2rem;
+  transition: all 0.3s ease;
+  border-radius: 0;
+}
+
+.input-minimal:focus {
+  outline: none;
+  border-bottom-color: #0B1C2D;
+  /* Navy border on focus */
+}
+
+.input-minimal::placeholder {
+  color: #9CA3AF !important;
+  /* Visible Medium Grey */
+  opacity: 1;
+}
+
+/* Track Selection Cards */
+.track-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.track-card {
+  background: white;
+  border: 1px solid var(--border-subtle);
+  padding: 2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s var(--ease-breath);
+  text-align: left;
+  border-top: 4px solid transparent;
+}
+
+.track-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  border-color: var(--color-navy);
+  border-top-color: var(--color-navy);
+}
+
+.track-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 1.5rem;
+  opacity: 0.8;
+}
+
+/* Question Screen */
+.progress-container {
+  width: 100%;
+  height: 4px;
+  background: #E5E7EB;
+  margin-bottom: 3rem;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background: var(--color-navy);
+  width: 0%;
+  transition: width 0.5s ease;
+}
+
+.question-text {
+  font-size: 1.5rem;
+  font-family: var(--font-serif);
+  margin-bottom: 2rem;
+  color: #0B1C2D;
+}
+
+.options-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.option-btn {
+  background: white;
+  border: 1px solid var(--border-subtle);
+  padding: 1.25rem 1.5rem;
+  text-align: left;
+  font-size: 1rem;
+  color: #121212;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+}
+
+.option-btn::before {
+  content: '';
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--text-muted);
+  border-radius: 50%;
+  margin-right: 1rem;
+  transition: all 0.2s ease;
+}
+
+.option-btn:hover {
+  border-color: var(--color-navy);
+  background: #FAFAFA;
+}
+
+.option-btn.selected {
+  border-color: var(--color-navy);
+  background: #F0F4F8;
+  color: var(--color-navy);
+  font-weight: 500;
+}
+
+.option-btn.selected::before {
+  background: var(--color-navy);
+  border-color: var(--color-navy);
+  box-shadow: inset 0 0 0 3px white;
+}
+
+/* Results Screen */
+.results-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  background: white;
+  padding: 2.5rem;
+  border: 1px solid var(--border-subtle);
+  border-radius: 4px;
+}
+
+.strength-pill {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background: rgba(16, 185, 129, 0.1);
+  color: var(--color-success);
+  font-size: 0.85rem;
+  border-radius: 100px;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.gap-pill {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background: rgba(245, 158, 11, 0.1);
+  color: #D97706;
+  font-size: 0.85rem;
+  border-radius: 100px;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Animations */
+.fade-up {
+  opacity: 0;
+  animation: fadeUp 0.6s var(--ease-breath) forwards;
+}
+
+.delay-1 {
+  animation-delay: 0.1s;
+}
+
+.delay-2 {
+  animation-delay: 0.2s;
+}
+
+.delay-3 {
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .headline-lg {
+    font-size: 2rem;
+  }
+
+  .track-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .diagnostic-container {
+    padding-top: 2rem;
+    justify-content: flex-start;
+  }
+
+  /* Responsive fixes for detailed results */
+  .results-grid>div[style*="grid-template-columns"] {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+}

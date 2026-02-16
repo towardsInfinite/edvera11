@@ -374,19 +374,22 @@ img {
     letter-spacing: -0.02em;
     font-weight: 600;
     color: var(--text-main);
+    flex-shrink: 0;
+    margin-right: 1rem;
 }
 
 .nav-links {
     display: flex;
-    gap: 2.5rem;
+    gap: 1.5rem;
     align-items: center;
     /* Vertical center for toggle */
 }
 
 .nav-links a {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     font-weight: 500;
     opacity: 0.8;
+    white-space: nowrap;
 }
 
 .nav-links a:hover {
