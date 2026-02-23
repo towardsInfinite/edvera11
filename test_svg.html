@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            background-color: #F8F8F8;
+            padding: 50px;
+        }
+
+        .box {
+            position: relative;
+            width: 1200px;
+            height: 600px;
+            background: white;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            font-family: serif;
+            font-size: 24px;
+            line-height: 1.6;
+            z-index: 2;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <!-- Abstract Purple Swoosh Background -->
+        <div
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; opacity: 1;">
+            <svg viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"
+                style="width: 100%; height: 100%;">
+                <defs>
+                    <linearGradient id="purpleSwoosh" x1="0%" y1="50%" x2="100%" y2="50%">
+                        <stop offset="0%" stop-color="#E6E0F8" stop-opacity="0" />
+                        <stop offset="40%" stop-color="#E6E0F8" stop-opacity="0.3" />
+                        <stop offset="100%" stop-color="#B2A3D4" stop-opacity="0.8" />
+                    </linearGradient>
+                </defs>
+                <!-- Trailing circle -->
+                <circle cx="950" cy="180" r="80" fill="#D9D2EC" opacity="0.8" />
+                <!-- Sweeping petal shape -->
+                <path d="M -100,0 Q 400,350 950,180 Q 500,750 -100,500 Z" fill="url(#purpleSwoosh)" />
+            </svg>
+        </div>
+
+        <div class="text">
+            EDVERA believes that education is not entertainment. We cultivate<br>
+            structure, discipline, and cognitive rigour, using modern tools<br>
+            intentionally to develop logic and systems thinking in high-potential<br>
+            students.
+        </div>
+    </div>
+</body>
+
+</html>

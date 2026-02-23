@@ -13,6 +13,7 @@
 
     <!-- Design System -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/pathways.css">
 
     <!-- Favicon (Placeholder) -->
     <link rel="icon" href="assets/images/logo.png" type="image/png">
@@ -34,14 +35,14 @@
                 </svg>
             </button>
             <div class="nav-links">
-                <a href="programs.html" class="hover-link">Programs</a>
+                <a href="pathways.html" class="hover-link">Pathways</a>
                 <a href="method.html" class="hover-link">Method</a>
                 <a href="diagnostic.html" class="hover-link">Pre Diagnostic</a>
                 <a href="ed-lab.html" class="hover-link">ED-LAB</a>
                 <a href="journeys.html" class="hover-link">Journeys</a>
                 <a href="index.html#outcomes" class="hover-link">Outcomes</a>
                 <a href="parents.html" class="hover-link">Parents</a>
-                <a href="#" class="btn btn-primary js-open-diagnostic"
+                <a href="https://calendly.com/admissions-edvera/new-meeting" target="_blank" class="btn btn-primary"
                     style="padding: 0.6rem 1.2rem; font-size: 0.85rem;">Book Free Diagnostic</a>
             </div>
         </div>
@@ -51,14 +52,18 @@
     <header class="section" style="padding-top: 140px; padding-bottom: 6rem;">
         <div class="container grid" style="grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
             <div class="reveal-on-scroll">
-                <h1 style="font-size: 3.5rem; margin-bottom: 1.5rem; letter-spacing: -0.03em;">
-                    Structured Intellectual Development.
-                </h1>
-                <p style="font-size: 1.25rem; opacity: 0.85; margin-bottom: 2.5rem; max-width: 500px;">
-                    1:1 personalised learning aligned to international curricula. Built for the long term.
-                </p>
-                <div class="flex" style="gap: 1.5rem; align-items: center;">
-                    <a href="#" class="btn btn-primary js-open-diagnostic">Book Free Diagnostic & Placement
+                <div class="hero-ticket-bg" style="margin-bottom: 2rem;">
+                    <h1
+                        style="font-size: 3.5rem; margin-bottom: 1.5rem; letter-spacing: -0.03em; position: relative; z-index: 2;">
+                        Structured Intellectual Development.
+                    </h1>
+                    <p
+                        style="font-size: 1.25rem; opacity: 0.85; margin-bottom: 0; max-width: 500px; position: relative; z-index: 2;">
+                        1:1 personalised learning aligned to international curricula. Built for the long term.
+                    </p>
+                </div>
+                <div class="flex" style="gap: 1.5rem; align-items: center; position: relative; z-index: 3;">
+                    <a href="https://calendly.com/admissions-edvera/new-meeting" target="_blank" class="btn btn-primary">Book Free Diagnostic & Placement
                         Session</a>
                     <a href="mailto:admissions@edvera.org" class="hover-link"
                         style="font-size: 0.95rem; font-weight: 500;">Email Admissions &rarr;</a>
@@ -74,8 +79,28 @@
 
     <!-- 2. Brand Positioning Strip -->
     <section class="section"
-        style="background-color: var(--color-bg-light); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
-        <div class="container text-center reveal-on-scroll">
+        style="position: relative; overflow: hidden; background-color: var(--bg-page); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle); padding: 7rem 0;">
+
+        <!-- Abstract Purple Swoosh Background -->
+        <div
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+            <svg viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"
+                style="min-width: 1200px; width: 100%; height: 100%; max-width: 1600px;">
+                <defs>
+                    <linearGradient id="purpleSwoosh" x1="0%" y1="50%" x2="100%" y2="50%">
+                        <stop offset="0%" stop-color="#E8E3F2" stop-opacity="0" />
+                        <stop offset="50%" stop-color="#CCC5DF" stop-opacity="0.35" />
+                        <stop offset="100%" stop-color="#AA94D4" stop-opacity="0.8" />
+                    </linearGradient>
+                </defs>
+                <g transform="translate(0, 50)">
+                    <circle cx="950" cy="180" r="70" fill="#E2DBEF" opacity="0.9" />
+                    <path d="M -100,-50 Q 450,380 950,180 Q 500,750 -100,500 Z" fill="url(#purpleSwoosh)" />
+                </g>
+            </svg>
+        </div>
+
+        <div class="container text-center reveal-on-scroll" style="position: relative; z-index: 2;">
             <p
                 style="font-family: var(--font-serif); font-size: 1.5rem; max-width: 800px; margin: 0 auto; line-height: 1.6;">
                 EDVERA believes that education is not entertainment. We cultivate structure, discipline, and cognitive
@@ -85,191 +110,176 @@
         </div>
     </section>
 
-    <!-- 3. Program Architecture -->
-    <section id="programs" class="section">
+    <!-- 3. Academic Pathways Overview -->
+    <section id="pathways" class="pathways-section">
         <div class="container">
             <div class="text-center reveal-on-scroll" style="margin-bottom: 4rem;">
-                <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Academic Pathways</h2>
-                <p class="text-muted">Structured progression of cognitive development.</p>
+                <h2 style="font-size: 3rem; margin-bottom: 1rem; color: white;">Academic Pathways</h2>
+                <div style="height: 2px; width: 60px; background: var(--accent-amber); margin: 0 auto 2rem;"></div>
+                <p style="color: rgba(255,255,255,0.7); font-size: 1.1rem; max-width: 600px; margin: 0 auto;">
+                    Structured progression focusing on cognitive foundations before technical syntax.
+                </p>
             </div>
 
-            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
-                <!-- Card 1: Foundations (Featured Image) -->
-                <div class="card reveal-on-scroll">
-                    <img src="assets/images/foundations.jpg" alt="Child solving spatial logic puzzle" class="card-img">
-                    <div class="card-content">
-                        <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Foundations</h3>
-                        <p class="text-muted"
-                            style="font-size: 0.9rem; margin-bottom: 1.5rem; text-transform: uppercase; letter-spacing: 0.05em;">
-                            Spatial Logic</p>
-                        <hr style="border: 0; border-top: 1px solid var(--border-subtle); margin-bottom: 1.5rem;">
-                        <p style="font-size: 0.95rem; margin-bottom: 1rem;">Building the cognitive habits required for
-                            logical reasoning and mathematical confidence.</p>
-                        <p style="font-size: 0.85rem; opacity: 0.7;">Uses controlled environments in Minecraft Education
-                            to
-                            teach spatial reasoning.</p>
+            <div class="pathways-grid">
+                <!-- Foundation Pathway -->
+                <div class="pathway-card reveal-on-scroll">
+                    <div>
+                        <span class="pathway-pill">Foundations</span>
+                        <h2 class="pathway-title">The Explorer</h2>
+                        <h3 class="pathway-subtitle">Introductory Level</h3>
+                        <p class="pathway-focus">A focus on foundational logic → visual deconstruction → spatial
+                            reasoning.</p>
                     </div>
+                    <a href="curriculum-foundation.html" class="pathway-cta">
+                        View Detailed Curriculum
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </a>
                 </div>
 
-                <!-- Card 2: Scratch -->
-                <div class="card reveal-on-scroll delay-1">
-                    <img src="assets/images/Scratch.jpg" alt="Child building visual block code" class="card-img">
-                    <div class="card-content">
-                        <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Scratch & Visual Logic</h3>
-                        <p class="text-muted"
-                            style="font-size: 0.9rem; margin-bottom: 1.5rem; text-transform: uppercase; letter-spacing: 0.05em;">
-                            Block Programming</p>
-                        <hr style="border: 0; border-top: 1px solid var(--border-subtle); margin-bottom: 1.5rem;">
-                        <p style="font-size: 0.95rem; margin-bottom: 1rem;">Focusing on algorithmic thinking without
-                            syntax
-                            errors.</p>
-                        <p style="font-size: 0.85rem; opacity: 0.7;">Students build complex animations and game logic
-                            using
-                            drag-and-drop code blocks.</p>
+                <!-- Builder Pathway -->
+                <div class="pathway-card reveal-on-scroll delay-1">
+                    <div>
+                        <span class="pathway-pill">Builder</span>
+                        <h2 class="pathway-title">The Creator</h2>
+                        <h3 class="pathway-subtitle">Intermediate Level</h3>
+                        <p class="pathway-focus">A focus on component thinking → algorithmic flow → structured systems.
+                        </p>
                     </div>
+                    <a href="curriculum-builder.html" class="pathway-cta">
+                        View Detailed Curriculum
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </a>
                 </div>
 
-                <!-- Card 3: Logic & Computing -->
-                <div class="card reveal-on-scroll delay-2">
-                    <img src="assets/images/Logic.jpg" alt="Transition from blocks to typed code" class="card-img">
-                    <div class="card-content">
-                        <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Logic & Computing</h3>
-                        <p class="text-muted"
-                            style="font-size: 0.9rem; margin-bottom: 1.5rem; text-transform: uppercase; letter-spacing: 0.05em;">
-                            Syntax Transition</p>
-                        <hr style="border: 0; border-top: 1px solid var(--border-subtle); margin-bottom: 1.5rem;">
-                        <p style="font-size: 0.95rem; margin-bottom: 1rem;">Transitioning from blocks to typed syntax
-                            (Python), focusing on code structure.</p>
-                        <p style="font-size: 0.85rem; opacity: 0.7;">Introduction to script-based logic via Roblox
-                            Studio
-                            (Lua).</p>
+                <!-- Thinker Pathway -->
+                <div class="pathway-card reveal-on-scroll delay-2">
+                    <div>
+                        <span class="pathway-pill">Thinker</span>
+                        <h2 class="pathway-title">The Architect</h2>
+                        <h3 class="pathway-subtitle">Advanced Track</h3>
+                        <p class="pathway-focus">A focus on syntax → scalable logic → professional foundations.</p>
                     </div>
-                </div>
-
-                <!-- Card 4: Mathematics (NEW) -->
-                <div class="card reveal-on-scroll delay-3">
-                    <img src="assets/images/Maths.jpg" alt="Child exploring mathematics and geometry" class="card-img">
-                    <div class="card-content">
-                        <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Mathematics (Gr 1-10)</h3>
-                        <p class="text-muted"
-                            style="font-size: 0.9rem; margin-bottom: 1.5rem; text-transform: uppercase; letter-spacing: 0.05em;">
-                            Core & Boards</p>
-                        <hr style="border: 0; border-top: 1px solid var(--border-subtle); margin-bottom: 1.5rem;">
-                        <p style="font-size: 0.95rem; margin-bottom: 1rem;">Complete coverage from Primary Numeracy to
-                            IGCSE
-                            / GCSE mastery.</p>
-                        <p style="font-size: 0.85rem; opacity: 0.7;">Focus on mental math, applied algebra, geometry,
-                            and
-                            rigorous exam technique.</p>
-                    </div>
-                </div>
-
-                <!-- Card 5: AI & ML -->
-                <div class="card reveal-on-scroll delay-3">
-                    <img src="assets/images/AI.jpg" alt="Futuristic AI interface and human interaction"
-                        class="card-img">
-                    <div class="card-content">
-                        <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">AI & Machine Learning</h3>
-                        <p class="text-muted"
-                            style="font-size: 0.9rem; margin-bottom: 1.5rem; text-transform: uppercase; letter-spacing: 0.05em;">
-                            Future Tech</p>
-                        <hr style="border: 0; border-top: 1px solid var(--border-subtle); margin-bottom: 1.5rem;">
-                        <p style="font-size: 0.95rem; margin-bottom: 1rem;">Demystifying neural networks and data
-                            science
-                            through age-appropriate tools.</p>
-                        <p style="font-size: 0.85rem; opacity: 0.7;">Understanding how AI learns patterns and making
-                            ethical
-                            technology decisions.</p>
-                    </div>
-                </div>
-
-                <!-- Card 6: GenAI (NEW) -->
-                <div class="card reveal-on-scroll delay-1">
-                    <img src="assets/images/GenAI.jpg" alt="No-code AI development and agent creation" class="card-img">
-                    <div class="card-content">
-                        <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">GenAI Development</h3>
-                        <p class="text-muted"
-                            style="font-size: 0.9rem; margin-bottom: 1.5rem; text-transform: uppercase; letter-spacing: 0.05em;">
-                            No-Code Tools</p>
-                        <hr style="border: 0; border-top: 1px solid var(--border-subtle); margin-bottom: 1.5rem;">
-                        <p style="font-size: 0.95rem; margin-bottom: 1rem;">Building advanced AI agents and assets using
-                            no-code toolchains.</p>
-                        <p style="font-size: 0.85rem; opacity: 0.7;">Mastering Prompt Engineering, Workflow Automation,
-                            and
-                            LLM fine-tuning.</p>
-                    </div>
-                </div>
-
-                <!-- Card 7: CS -->
-                <div class="card reveal-on-scroll delay-2">
-                    <img src="assets/images/computer-science-rigour.jpg"
-                        alt="Student engaging with advanced computer science concepts" class="card-img">
-                    <div class="card-content">
-                        <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Computer Science</h3>
-                        <p class="text-muted"
-                            style="font-size: 0.9rem; margin-bottom: 1.5rem; text-transform: uppercase; letter-spacing: 0.05em;">
-                            Academic Rigour</p>
-                        <hr style="border: 0; border-top: 1px solid var(--border-subtle); margin-bottom: 1.5rem;">
-                        <p style="font-size: 0.95rem; margin-bottom: 1rem;">Rigorous academic computer science, data
-                            structures, and web architecture.</p>
-                        <p style="font-size: 0.85rem; opacity: 0.7;">Full alignment with pre-college requirements.</p>
-                    </div>
-                </div>
-
-                <!-- Card 8: IGCSE -->
-                <div class="card reveal-on-scroll delay-1">
-                    <img src="assets/images/IGCSE.jpg" alt="Student preparing for IGCSE and IB exams with digital tools"
-                        class="card-img">
-                    <div class="card-content">
-                        <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">IGCSE / IB Track</h3>
-                        <p class="text-muted"
-                            style="font-size: 0.9rem; margin-bottom: 1.5rem; text-transform: uppercase; letter-spacing: 0.05em;">
-                            Exam Preparation</p>
-                        <hr style="border: 0; border-top: 1px solid var(--border-subtle); margin-bottom: 1.5rem;">
-                        <p style="font-size: 0.95rem; margin-bottom: 1rem;">Targeted preparation for Computer Science
-                            papers
-                            with focus on high-scoring answers.</p>
-                        <p style="font-size: 0.85rem; opacity: 0.7;">Mock exams, past paper analysis, and theoretical
-                            mastery.</p>
-                    </div>
+                    <a href="curriculum-thinker.html" class="pathway-cta">
+                        View Detailed Curriculum
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </a>
                 </div>
             </div>
+
+            <div class="text-center reveal-on-scroll" style="margin-top: 60px;">
+                <p class="microcopy" style="color: rgba(255,255,255,0.6);">Begin with Diagnostics → Pathway matched to
+                    your thinking profile.</p>
+            </div>
+        </div>
     </section>
 
     <!-- 4. The EDVERA Method -->
-    <section id="method" class="section bg-alt">
+    <section id="method" class="section bg-alt" style="padding: 6rem 0;">
         <div class="container">
-            <h2 class="reveal-on-scroll" style="font-size: 2.5rem; margin-bottom: 3rem;">The EDVERA Method</h2>
+            <h2 class="reveal-on-scroll"
+                style="font-family: var(--font-serif); font-size: 2.8rem; font-weight: 400; color: var(--text-main); margin-bottom: 4rem; letter-spacing: -0.02em;">
+                The EDVERA Method</h2>
 
-            <div class="grid" style="grid-template-columns: repeat(4, 1fr); gap: 2rem;">
+            <!-- Method Grid -->
+            <div class="grid" style="grid-template-columns: repeat(4, 1fr); gap: 3rem;">
+
+                <!-- Step 01 -->
                 <div class="reveal-on-scroll">
-                    <span
-                        style="display: block; font-family: var(--font-serif); font-size: 3rem; color: var(--color-primary); margin-bottom: 1rem; opacity: 0.2;">01</span>
-                    <h4 style="font-size: 1.2rem; margin-bottom: 0.5rem;">Diagnostic</h4>
-                    <p style="font-size: 0.9rem; opacity: 0.8;">We assess current cognitive standing and logic gaps
-                        before teaching starts.</p>
+                    <div
+                        style="display: flex; align-items: center; justify-content: flex-start; gap: 1rem; margin-bottom: 1.5rem;">
+                        <span
+                            style="font-family: var(--font-serif); font-size: 3.5rem; color: #D6D6DB; line-height: 1;">01</span>
+                        <!-- 5 Chevrons -->
+                        <svg width="100" height="36" viewBox="0 0 100 36" xmlns="http://www.w3.org/2000/svg"
+                            style="margin-left: -5px;">
+                            <g fill="#D1DAFC" stroke="#A9B4EF" stroke-width="1.2" stroke-linejoin="miter">
+                                <polygon points="1,4 12,4 25,18 12,32 1,32 14,18" />
+                                <polygon points="18,4 29,4 42,18 29,32 18,32 31,18" />
+                                <polygon points="35,4 46,4 59,18 46,32 35,32 48,18" />
+                                <polygon points="52,4 63,4 76,18 63,32 52,32 65,18" />
+                                <polygon points="69,4 80,4 93,18 80,32 69,32 82,18" />
+                            </g>
+                        </svg>
+                    </div>
+                    <h4
+                        style="font-family: var(--font-serif); font-size: 1.3rem; font-weight: 400; margin-bottom: 0.8rem; color: var(--text-main);">
+                        Diagnostic</h4>
+                    <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.6;">We assess current
+                        cognitive standing and logic gaps before teaching starts.</p>
                 </div>
+
+                <!-- Step 02 -->
                 <div class="reveal-on-scroll delay-1">
-                    <span
-                        style="display: block; font-family: var(--font-serif); font-size: 3rem; color: var(--color-primary); margin-bottom: 1rem; opacity: 0.2;">02</span>
-                    <h4 style="font-size: 1.2rem; margin-bottom: 0.5rem;">Blueprint</h4>
-                    <p style="font-size: 0.9rem; opacity: 0.8;">A personalised 6-12 month roadmap tailored to the
-                        student’s pace and targets.</p>
+                    <div
+                        style="display: flex; align-items: center; justify-content: flex-start; gap: 1rem; margin-bottom: 1.5rem;">
+                        <span
+                            style="font-family: var(--font-serif); font-size: 3.5rem; color: #D6D6DB; line-height: 1;">02</span>
+                        <svg width="100" height="36" viewBox="0 0 100 36" xmlns="http://www.w3.org/2000/svg"
+                            style="margin-left: -5px;">
+                            <g fill="#D1DAFC" stroke="#A9B4EF" stroke-width="1.2" stroke-linejoin="miter">
+                                <polygon points="1,4 12,4 25,18 12,32 1,32 14,18" />
+                                <polygon points="18,4 29,4 42,18 29,32 18,32 31,18" />
+                                <polygon points="35,4 46,4 59,18 46,32 35,32 48,18" />
+                                <polygon points="52,4 63,4 76,18 63,32 52,32 65,18" />
+                                <polygon points="69,4 80,4 93,18 80,32 69,32 82,18" />
+                            </g>
+                        </svg>
+                    </div>
+                    <h4
+                        style="font-family: var(--font-serif); font-size: 1.3rem; font-weight: 400; margin-bottom: 0.8rem; color: var(--text-main);">
+                        Blueprint</h4>
+                    <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.6;">A personalised 6-12 month
+                        roadmap tailored to the student’s pace and targets.</p>
                 </div>
+
+                <!-- Step 03 -->
                 <div class="reveal-on-scroll delay-2">
-                    <span
-                        style="display: block; font-family: var(--font-serif); font-size: 3rem; color: var(--color-primary); margin-bottom: 1rem; opacity: 0.2;">03</span>
-                    <h4 style="font-size: 1.2rem; margin-bottom: 0.5rem;">1:1 Instruction</h4>
-                    <p style="font-size: 0.9rem; opacity: 0.8;">Undivided attention from senior mentors. No batches. No
-                        distractions.</p>
+                    <div
+                        style="display: flex; align-items: center; justify-content: flex-start; gap: 1rem; margin-bottom: 1.5rem;">
+                        <span
+                            style="font-family: var(--font-serif); font-size: 3.5rem; color: #D6D6DB; line-height: 1;">03</span>
+                        <svg width="100" height="36" viewBox="0 0 100 36" xmlns="http://www.w3.org/2000/svg"
+                            style="margin-left: -5px;">
+                            <g fill="#D1DAFC" stroke="#A9B4EF" stroke-width="1.2" stroke-linejoin="miter">
+                                <polygon points="1,4 12,4 25,18 12,32 1,32 14,18" />
+                                <polygon points="18,4 29,4 42,18 29,32 18,32 31,18" />
+                                <polygon points="35,4 46,4 59,18 46,32 35,32 48,18" />
+                                <polygon points="52,4 63,4 76,18 63,32 52,32 65,18" />
+                                <polygon points="69,4 80,4 93,18 80,32 69,32 82,18" />
+                            </g>
+                        </svg>
+                    </div>
+                    <h4
+                        style="font-family: var(--font-serif); font-size: 1.3rem; font-weight: 400; margin-bottom: 0.8rem; color: var(--text-main);">
+                        1:1 Instruction</h4>
+                    <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.6;">Undivided attention from
+                        senior mentors. No batches. No distractions.</p>
                 </div>
+
+                <!-- Step 04 -->
                 <div class="reveal-on-scroll delay-3">
-                    <span
-                        style="display: block; font-family: var(--font-serif); font-size: 3rem; color: var(--color-primary); margin-bottom: 1rem; opacity: 0.2;">04</span>
-                    <h4 style="font-size: 1.2rem; margin-bottom: 0.5rem;">Progress Review</h4>
-                    <p style="font-size: 0.9rem; opacity: 0.8;">Quarterly deep-dive feedback sessions for parents on
-                        intellectual development.</p>
+                    <div
+                        style="display: flex; align-items: center; justify-content: flex-start; gap: 1rem; margin-bottom: 1.5rem; height: 3.5rem;">
+                        <span
+                            style="font-family: var(--font-serif); font-size: 3.5rem; color: #D6D6DB; line-height: 1;">04</span>
+                    </div>
+                    <h4
+                        style="font-family: var(--font-serif); font-size: 1.3rem; font-weight: 400; margin-bottom: 0.8rem; color: var(--text-main);">
+                        Progress Review</h4>
+                    <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.6;">Quarterly deep-dive
+                        feedback sessions for parents on intellectual development.</p>
                 </div>
+
             </div>
         </div>
     </section>
@@ -307,26 +317,79 @@
     </section>
 
     <!-- 5. Quiet Differentiators -->
-    <section class="section">
-        <div class="container grid" style="grid-template-columns: 1fr 1fr; gap: 4rem;">
-            <div class="reveal-on-scroll">
-                <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Quiet Authority.</h2>
-                <div style="height: 2px; width: 60px; background: var(--color-primary); margin-bottom: 2rem;"></div>
+    <section class="section"
+        style="position: relative; overflow: hidden; background-color: var(--bg-page); padding: 8rem 0; border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+
+        <!-- Background Graphics Left (Purple Petals) -->
+        <div
+            style="position: absolute; top: 50%; left: 0; transform: translateY(-50%); width: 800px; height: 700px; z-index: 0; pointer-events: none;">
+            <svg viewBox="0 0 800 700" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: 100%;">
+                <defs>
+                    <linearGradient id="petalGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#EAE5F3" stop-opacity="0" />
+                        <stop offset="50%" stop-color="#DFD7F0" stop-opacity="0.4" />
+                        <stop offset="100%" stop-color="#CCBDF1" stop-opacity="0.9" />
+                    </linearGradient>
+                </defs>
+                <g transform="translate(150, 80)">
+                    <!-- Petal 1 (leftmost) -->
+                    <path d="M 0,450 C -30,250 80,50 200,50 C 220,250 100,500 0,450 Z" fill="url(#petalGrad)"
+                        opacity="0.6" />
+                    <!-- Petal 2 (middle) -->
+                    <path d="M 100,500 C 70,300 180,100 300,100 C 320,300 200,550 100,500 Z" fill="url(#petalGrad)"
+                        opacity="0.6" />
+                    <!-- Petal 3 (rightmost) -->
+                    <path d="M 200,550 C 170,350 280,150 400,150 C 420,350 300,600 200,550 Z" fill="url(#petalGrad)"
+                        opacity="0.6" />
+                </g>
+            </svg>
+        </div>
+
+        <!-- Background Graphics Right (Concentric Arcs) -->
+        <div
+            style="position: absolute; top: 50%; right: -5%; transform: translateY(-50%); width: 700px; height: 700px; z-index: 0; pointer-events: none;">
+            <svg viewBox="0 0 700 700" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: 100%;">
+                <g stroke="#D4DBE6" stroke-width="2.5" fill="none" opacity="0.7">
+                    <!-- Adjusted radii and dashes to look like intersecting light arcs -->
+                    <circle cx="350" cy="350" r="280" stroke-dasharray="1200 400" stroke-dashoffset="100" />
+                    <circle cx="360" cy="330" r="260" stroke-dasharray="900 800" stroke-dashoffset="-200"
+                        opacity="0.6" />
+                    <circle cx="310" cy="370" r="310" stroke-dasharray="800 1200" stroke-dashoffset="50"
+                        opacity="0.5" />
+                </g>
+            </svg>
+        </div>
+
+        <div class="container grid"
+            style="grid-template-columns: 0.8fr 1.2fr; gap: 4rem; position: relative; z-index: 2; align-items: center;">
+            <div class="reveal-on-scroll" style="padding-left: 2rem;">
+                <h2
+                    style="font-family: var(--font-serif); font-size: 3.5rem; font-weight: 400; color: var(--text-main); letter-spacing: -0.02em;">
+                    Quiet Authority.</h2>
             </div>
-            <div class="grid" style="gap: 2rem;">
+
+            <div class="grid" style="gap: 3rem; padding-right: 2rem; max-width: 600px; margin-left: auto;">
                 <div class="reveal-on-scroll delay-1">
-                    <h5 style="font-size: 1.1rem; margin-bottom: 0.5rem;">1:1 Only. No Batches.</h5>
-                    <p class="text-muted">Education is personal. We strictly avoid the factory-model of batch learning.
+                    <h5
+                        style="font-family: var(--font-serif); font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--text-main); font-weight: 600;">
+                        1:1 Only. No Batches.</h5>
+                    <p style="font-size: 1rem; color: var(--text-muted); line-height: 1.6; margin: 0;">Education is
+                        personal. We strictly avoid the factory-model of batch learning.
                     </p>
                 </div>
                 <div class="reveal-on-scroll delay-2">
-                    <h5 style="font-size: 1.1rem; margin-bottom: 0.5rem;">International Standards</h5>
-                    <p class="text-muted">Our curriculum is bench-marked against global IGCSE and IB standards, not just
-                        local requirements.</p>
+                    <h5
+                        style="font-family: var(--font-serif); font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--text-main); font-weight: 600;">
+                        International Standards</h5>
+                    <p style="font-size: 1rem; color: var(--text-muted); line-height: 1.6; margin: 0;">Our curriculum is
+                        bench-marked against global IGCSE and IB standards, not just local requirements.</p>
                 </div>
                 <div class="reveal-on-scroll delay-3">
-                    <h5 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Disciplined Culture</h5>
-                    <p class="text-muted">We do not gamify learning with meaningless badges. We reward understanding.
+                    <h5
+                        style="font-family: var(--font-serif); font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--text-main); font-weight: 600;">
+                        Disciplined Culture</h5>
+                    <p style="font-size: 1rem; color: var(--text-muted); line-height: 1.6; margin: 0;">We do not gamify
+                        learning with meaningless badges. We reward understanding.
                     </p>
                 </div>
             </div>
@@ -403,46 +466,144 @@
 
 
     <!-- 7. Outcomes -->
-    <section id="outcomes" class="section">
-        <div class="container text-center reveal-on-scroll" style="margin-bottom: 3rem;">
-            <h2 style="font-size: 2.5rem;">Outcomes</h2>
+    <!-- 7. Outcomes -->
+    <section id="outcomes" class="section"
+        style="position: relative; overflow: hidden; background-color: #F3F1F5; padding: 8rem 0;">
+
+        <!-- Topographical SVG Background -->
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none;">
+            <svg viewBox="0 0 1440 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"
+                style="width: 100%; height: 100%;">
+                <g fill="none" stroke="#E1DEE7" stroke-width="1.8">
+                    <!-- Smooth Wave Group 1 -->
+                    <path d="M-100 100 C 200 400, 500 50, 900 350 C 1200 600, 1300 200, 1500 100" />
+                    <path d="M-100 150 C 220 450, 520 100, 920 400 C 1220 650, 1320 250, 1500 150" />
+                    <path d="M-100 200 C 240 500, 540 150, 940 450 C 1240 700, 1340 300, 1500 200" />
+                    <path d="M-100 250 C 260 550, 560 200, 960 500 C 1260 750, 1360 350, 1500 250" />
+                    <path d="M-100 300 C 280 600, 580 250, 980 550 C 1280 800, 1380 400, 1500 300" />
+                    <path d="M-100 350 C 300 650, 600 300, 1000 600 C 1300 850, 1400 450, 1500 350" />
+
+                    <!-- Wave Group 2 Intersecting -->
+                    <path d="M-100 0 C 300 100, 400 600, 1000 200 C 1300 -100, 1400 400, 1500 500" />
+                    <path d="M-100 50 C 320 150, 420 650, 1020 250 C 1320 -50, 1420 450, 1500 550" />
+
+                    <!-- Concentric curves bottom left -->
+                    <path d="M -50 700 C 150 450, 400 600, 600 800" />
+                    <path d="M -50 750 C 200 500, 450 650, 650 850" />
+
+                    <!-- Sweeping arch top right -->
+                    <path d="M 1000 -100 C 1100 300, 1400 100, 1500 400" />
+                    <path d="M 1050 -100 C 1150 350, 1450 150, 1500 450" />
+                </g>
+            </svg>
         </div>
-        <div class="container grid" style="grid-template-columns: repeat(3, 1fr); text-align: center; gap: 3rem;">
-            <div class="reveal-on-scroll">
-                <h3 style="margin-bottom: 1rem;">Clarity</h3>
-                <p class="text-muted">The ability to deconstruct complex problems into manageable logical steps.</p>
+
+        <div class="container" style="position: relative; z-index: 2;">
+            <div class="text-center reveal-on-scroll" style="margin-bottom: 5rem;">
+                <h2
+                    style="font-family: var(--font-serif); font-size: 3.2rem; color: #28252C; font-weight: 400; margin: 0; letter-spacing: -0.02em;">
+                    Outcomes</h2>
             </div>
-            <div class="reveal-on-scroll delay-1">
-                <h3 style="margin-bottom: 1rem;">Confidence</h3>
-                <p class="text-muted">Intellectual self-assurance that comes from mastering difficult concepts.</p>
-            </div>
-            <div class="reveal-on-scroll delay-2">
-                <h3 style="margin-bottom: 1rem;">Structure</h3>
-                <p class="text-muted">A disciplined approach to thinking that serves across all academic subjects.</p>
+
+            <div class="grid" style="grid-template-columns: repeat(3, 1fr); text-align: center; gap: 4rem;">
+                <div class="reveal-on-scroll">
+                    <h3
+                        style="font-family: var(--font-serif); font-size: 1.5rem; color: #3A3546; font-weight: 400; margin-bottom: 1.5rem;">
+                        Clarity</h3>
+                    <p
+                        style="font-size: 1.05rem; color: #5B5665; line-height: 1.7; font-weight: 400; margin: 0 auto; max-width: 320px;">
+                        The ability to deconstruct complex problems into manageable logical steps.
+                    </p>
+                </div>
+                <div class="reveal-on-scroll delay-1">
+                    <h3
+                        style="font-family: var(--font-serif); font-size: 1.5rem; color: #3A3546; font-weight: 400; margin-bottom: 1.5rem;">
+                        Confidence</h3>
+                    <p
+                        style="font-size: 1.05rem; color: #5B5665; line-height: 1.7; font-weight: 400; margin: 0 auto; max-width: 320px;">
+                        Intellectual self-assurance that comes from mastering difficult concepts.
+                    </p>
+                </div>
+                <div class="reveal-on-scroll delay-2">
+                    <h3
+                        style="font-family: var(--font-serif); font-size: 1.5rem; color: #3A3546; font-weight: 400; margin-bottom: 1.5rem;">
+                        Structure</h3>
+                    <p
+                        style="font-size: 1.05rem; color: #5B5665; line-height: 1.7; font-weight: 400; margin: 0 auto; max-width: 320px;">
+                        A disciplined approach to thinking that serves across all academic subjects.
+                    </p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- 8. Faculty -->
-    <section id="faculty" class="section bg-alt">
-        <div class="container reveal-on-scroll">
-            <h2 style="font-size: 2.5rem; margin-bottom: 2rem;">Faculty & Academic Culture</h2>
-            <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 4rem;">
-                <div>
-                    <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem;">
-                        Our faculty consists of experienced educators with 5–10+ years of teaching and mentoring
-                        experience, alongside industry professionals and academic researchers.
-                    </p>
-                    <p style="font-size: 1.1rem; line-height: 1.8;">
-                        They bring rigour from backgrounds including IIT Madras, IIT Bombay, UCL, and University of
-                        Bristol, VIT, Jadavpur University balanced with industry exposure from Deloitte, Amazon, BCG,
-                        Salesforce and many more.
-                    </p>
-                </div>
+    <section id="faculty" class="section"
+        style="position: relative; overflow: hidden; background-color: var(--bg-page); padding: 7rem 0;">
+
+        <!-- Abstract Purple SVG Background -->
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none;">
+            <svg viewBox="0 0 1440 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"
+                style="width: 100%; height: 100%;">
+                <defs>
+                    <linearGradient id="facGradLeft" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#CAB5F4" stop-opacity="0.9" />
+                        <stop offset="100%" stop-color="#E1D7FC" stop-opacity="0.5" />
+                    </linearGradient>
+                    <linearGradient id="facGradRight" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" stop-color="#E8E2F6" stop-opacity="0.8" />
+                        <stop offset="100%" stop-color="#D4C4F0" stop-opacity="0.3" />
+                    </linearGradient>
+                </defs>
+
+                <!-- Solid light tinted background to start left side -->
+                <rect x="0" y="0" width="150" height="600" fill="#CDBCF5" opacity="0.8" />
+
+                <!-- Sweeping Left Side Form -->
+                <path d="M 0,0 L 250,0 C 150,200 300,500 150,600 L 0,600 Z" fill="url(#facGradLeft)" opacity="0.8" />
+
+                <!-- Central vertical pillar behind text -->
+                <rect x="850" y="-100" width="250" height="700" rx="30" fill="url(#facGradRight)" opacity="0.6"
+                    transform="rotate(5)" />
+
+                <!-- Sweeping swoop intersecting middle -->
+                <path d="M 1200,0 C 950,200 800,400 950,600 L 1440,600 L 1440,0 Z" fill="#DCD1F5" opacity="0.6" />
+
+                <!-- Lower right concentric quarter circle rings -->
+                <path d="M 1000,600 A 300 300 0 0 1 1300 300" fill="none" stroke="#E1D9F7" stroke-width="80"
+                    stroke-linecap="round" opacity="0.9" />
+                <path d="M 1150,600 A 150 150 0 0 1 1300 450" fill="none" stroke="#D1C3F3" stroke-width="50"
+                    opacity="0.8" />
+            </svg>
+        </div>
+
+        <div class="container grid"
+            style="grid-template-columns: 1fr 1.1fr; gap: 5rem; align-items: center; position: relative; z-index: 2;">
+            <div class="reveal-on-scroll" style="padding-left: 1rem;">
+                <h2
+                    style="font-family: var(--font-serif); font-size: 2.8rem; font-weight: 500; color: var(--text-main); margin-bottom: 2rem; letter-spacing: -0.02em;">
+                    Faculty <span style="font-family: var(--font-serif); font-style: italic;">&amp;</span> Academic
+                    Culture</h2>
+
+                <p
+                    style="font-size: 1.05rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 1.8rem; font-weight: 400;">
+                    Our faculty consists of experienced educators with 5–10+ years of teaching and mentoring experience,
+                    alongside industry professionals and academic researchers.
+                </p>
+                <p style="font-size: 1.05rem; color: var(--text-muted); line-height: 1.7; font-weight: 400;">
+                    They bring rigour from backgrounds including IIT Madras, IIT Bombay, UCL, and University of Bristol,
+                    VIT, Jadavpur University balanced with industry exposure from Deloitte, Amazon, BCG, Salesforce and
+                    many more.
+                </p>
+            </div>
+
+            <div class="reveal-on-scroll delay-1">
+                <!-- Large White Quote Container mimicking layout -->
                 <div
-                    style="display: flex; align-items: center; justify-content: center; border: 1px solid var(--border-subtle); background: var(--bg-card); padding: 2rem;">
-                    <p style="font-family: var(--font-serif); font-size: 1.25rem; text-align: center;">
-                        "We hire for patience, academic depth, and the ability to mentor."
+                    style="background: var(--bg-card); padding: 4rem 3rem; border-radius: 2px; box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05); margin-right: -2rem; border: 1px solid var(--border-subtle);">
+                    <p
+                        style="font-family: var(--font-serif); font-size: 1.35rem; color: var(--text-main); text-align: center; line-height: 1.8; margin: 0; font-weight: 500;">
+                        "We hire for patience, academic depth, and the<br>ability to mentor."
                     </p>
                 </div>
             </div>
@@ -507,27 +668,71 @@
     </section>
 
     <!-- Who We Are -->
-    <section class="section bg-alt">
-        <div class="container grid" style="grid-template-columns: 1fr 1.5fr; gap: 4rem;">
-            <div class="reveal-on-scroll">
-                <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Who We Are</h2>
-                <div style="height: 2px; width: 60px; background: var(--color-primary); margin-bottom: 2rem;"></div>
+    <section class="section"
+        style="background-color: var(--bg-page); padding: 7rem 0; position: relative; overflow: hidden; border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+
+        <!-- Beautiful Spirograph SVG -->
+        <div
+            style="position: absolute; top: 50%; left: 0; transform: translateY(-50%) translateX(-25%); width: 900px; height: 900px; z-index: 1; pointer-events: none;">
+            <svg viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: 100%;">
+                <defs>
+                    <g id="spiro-petal" fill="none" stroke-width="0.8" opacity="0.45" style="mix-blend-mode: multiply;">
+                        <ellipse cx="40" cy="0" rx="90" ry="25" transform="rotate(0)" stroke="#B3A5D4" />
+                        <ellipse cx="50" cy="0" rx="105" ry="30" transform="rotate(3)" stroke="#A99BCC" />
+                        <ellipse cx="60" cy="0" rx="120" ry="35" transform="rotate(6)" stroke="#9F91C4" />
+                        <ellipse cx="70" cy="0" rx="135" ry="40" transform="rotate(9)" stroke="#9588BC" />
+                        <ellipse cx="80" cy="0" rx="150" ry="45" transform="rotate(12)" stroke="#8D80B4" />
+                        <ellipse cx="90" cy="0" rx="165" ry="50" transform="rotate(15)" stroke="#8476AA" />
+                        <ellipse cx="100" cy="0" rx="180" ry="55" transform="rotate(18)" stroke="#7D6FA2" />
+                        <ellipse cx="110" cy="0" rx="195" ry="60" transform="rotate(21)" stroke="#76679B" />
+                        <ellipse cx="120" cy="0" rx="210" ry="65" transform="rotate(24)" stroke="#6F6193" />
+                        <ellipse cx="130" cy="0" rx="225" ry="70" transform="rotate(27)" stroke="#6A5B8B" />
+                        <ellipse cx="140" cy="0" rx="240" ry="75" transform="rotate(30)" stroke="#635583" />
+                        <ellipse cx="150" cy="0" rx="255" ry="80" transform="rotate(33)" stroke="#5D4F7B" />
+                        <ellipse cx="160" cy="0" rx="270" ry="85" transform="rotate(36)" stroke="#584A73" />
+                        <ellipse cx="170" cy="0" rx="285" ry="90" transform="rotate(39)" stroke="#53456B" />
+                        <ellipse cx="180" cy="0" rx="300" ry="95" transform="rotate(42)" stroke="#4E4064" />
+                    </g>
+                </defs>
+
+                <g style="mix-blend-mode: color-burn;" opacity="0.8">
+                    <use href="#spiro-petal" x="400" y="400" transform="rotate(0 400 400)" />
+                    <use href="#spiro-petal" x="400" y="400" transform="rotate(72 400 400)" />
+                    <use href="#spiro-petal" x="400" y="400" transform="rotate(144 400 400)" />
+                    <use href="#spiro-petal" x="400" y="400" transform="rotate(216 400 400)" />
+                    <use href="#spiro-petal" x="400" y="400" transform="rotate(288 400 400)" />
+                </g>
+            </svg>
+        </div>
+
+        <div class="container grid"
+            style="grid-template-columns: 0.8fr 1.2fr; gap: 4rem; position: relative; z-index: 2; align-items: start; padding-top: 2rem;">
+            <!-- Title Col (Left) -->
+            <div class="reveal-on-scroll" style="padding-left: 2rem;">
+                <h2
+                    style="font-family: var(--font-serif); font-size: 3.2rem; color: var(--text-main); font-weight: 400; margin: 0; letter-spacing: -0.02em;">
+                    Who We Are</h2>
             </div>
-            <div class="reveal-on-scroll delay-1">
-                <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem;">
+
+            <!-- Text Col (Right) -->
+            <div class="reveal-on-scroll delay-1" style="max-width: 650px; margin-left: auto;">
+                <p
+                    style="font-size: 1.05rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 2rem; font-weight: 400;">
                     Edvera is run by a small team of educators with professional experience in teaching and mentoring
                     students across school and university levels.
                 </p>
-                <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem;">
+                <p
+                    style="font-size: 1.05rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 2rem; font-weight: 400;">
                     Our team members come from technical backgrounds including computer science, engineering, and
                     artificial intelligence, and have collectively spent several years working in education and
                     mentorship roles.
                 </p>
-                <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem;">
+                <p
+                    style="font-size: 1.05rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 2rem; font-weight: 400;">
                     Over time, we have worked with a large number of students, supporting them in developing strong
                     conceptual understanding and academic confidence in both school and higher education settings.
                 </p>
-                <p style="font-size: 1.1rem; line-height: 1.8;">
+                <p style="font-size: 1.05rem; color: var(--text-muted); line-height: 1.8; margin: 0; font-weight: 400;">
                     At this stage, we operate as a focused, independent initiative, prioritizing structured one-on-one
                     learning and consistent teaching methods over individual visibility.
                 </p>
@@ -588,17 +793,106 @@
     </section>
 
     <!-- 11. Primary Conversion Block -->
-    <section class="section" style="padding: 6rem 0; text-align: center;">
-        <div class="container reveal-on-scroll">
-            <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Begin with a Diagnostic.</h2>
-            <p style="max-width: 600px; margin: 0 auto 2.5rem; opacity: 0.8;">
+    <section class="section"
+        style="padding: 10rem 0; text-align: center; background-color: #EFEFEF; position: relative; overflow: hidden;">
+
+        <!-- Animated / Parametric Wireframe Ribbons -->
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none;">
+            <svg viewBox="0 0 1440 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"
+                style="width: 100%; height: 100%; mix-blend-mode: multiply;">
+                <!-- Left Twisted Ribbon -->
+                <g fill="none" stroke-width="0.8" opacity="0.6">
+                    <path d="M 100 -100 C 300 200, -100 400, 150 800" stroke="rgb(170,140,220)" />
+                    <path d="M 115 -94 C 300 203, -98 403, 163 806" stroke="rgb(169,141,220)" />
+                    <path d="M 129 -88 C 300 206, -95 406, 176 812" stroke="rgb(168,142,220)" />
+                    <path d="M 144 -82 C 300 209, -92 409, 189 818" stroke="rgb(167,143,220)" />
+                    <path d="M 158 -76 C 300 212, -88 412, 202 824" stroke="rgb(165,145,220)" />
+                    <path d="M 171 -70 C 300 215, -83 415, 214 830" stroke="rgb(163,146,220)" />
+                    <path d="M 184 -64 C 300 218, -77 418, 225 836" stroke="rgb(161,148,220)" />
+                    <path d="M 196 -58 C 300 221, -71 421, 237 842" stroke="rgb(159,150,220)" />
+                    <path d="M 207 -52 C 300 224, -63 424, 248 848" stroke="rgb(157,152,220)" />
+                    <path d="M 217 -46 C 300 227, -55 427, 258 854" stroke="rgb(154,155,220)" />
+                    <path d="M 226 -40 C 300 230, -46 430, 268 860" stroke="rgb(151,157,220)" />
+                    <path d="M 233 -34 C 300 233, -36 433, 277 866" stroke="rgb(148,160,220)" />
+                    <path d="M 239 -28 C 300 236, -26 436, 286 872" stroke="rgb(145,162,220)" />
+                    <path d="M 244 -22 C 300 239, -15 439, 294 878" stroke="rgb(141,164,220)" />
+                    <path d="M 247 -16 C 300 242, -5 442, 301 884" stroke="rgb(137,167,220)" />
+                    <path d="M 249 -10 C 300 245, 6 445, 307 890" stroke="rgb(133,169,220)" />
+                    <path d="M 249 -4 C 300 248, 17 448, 313 896" stroke="rgb(128,171,220)" />
+                    <path d="M 248 2 C 300 251, 28 451, 318 902" stroke="rgb(123,174,220)" />
+                    <path d="M 245 8 C 300 254, 40 454, 323 908" stroke="rgb(118,176,220)" />
+                    <path d="M 240 14 C 300 257, 51 457, 327 914" stroke="rgb(112,178,220)" />
+                    <path d="M 234 20 C 300 260, 63 460, 330 920" stroke="rgb(107,180,220)" />
+                    <path d="M 226 26 C 300 263, 76 463, 332 926" stroke="rgb(101,182,220)" />
+                    <path d="M 216 32 C 300 266, 88 466, 333 932" stroke="rgb(94,184,220)" />
+                    <path d="M 205 38 C 300 269, 100 469, 334 938" stroke="rgb(88,185,220)" />
+                    <path d="M 193 44 C 300 272, 113 472, 334 944" stroke="rgb(81,187,220)" />
+                    <path d="M 179 50 C 300 275, 126 475, 333 950" stroke="rgb(74,188,220)" />
+                    <path d="M 165 56 C 300 278, 139 478, 331 956" stroke="rgb(67,190,220)" />
+                    <path d="M 149 62 C 300 281, 151 481, 328 962" stroke="rgb(59,191,220)" />
+                    <path d="M 132 68 C 300 284, 164 484, 325 968" stroke="rgb(52,192,220)" />
+                    <path d="M 115 74 C 300 287, 177 487, 321 974" stroke="rgb(44,192,220)" />
+                    <path d="M 96 80 C 300 290, 190 490, 315 980" stroke="rgb(36,193,220)" />
+                    <path d="M 77 86 C 300 293, 202 493, 309 986" stroke="rgb(28,193,220)" />
+                    <path d="M 57 92 C 300 296, 214 496, 302 992" stroke="rgb(20,194,220)" />
+                    <path d="M 37 98 C 300 299, 226 499, 294 998" stroke="rgb(12,194,220)" />
+                    <path d="M -50 158 C 300 329, 319 529, 137 1058" stroke="rgb(-80,188,220)" />
+                    <path d="M -9 110 C 300 305, 248 505, 276 1010" stroke="rgb(-4,193,220)" />
+                    <path d="M -29 116 C 300 308, 258 508, 265 1016" stroke="rgb(-13,193,220)" />
+                    <path d="M -49 122 C 300 311, 267 511, 253 1022" stroke="rgb(-21,192,220)" />
+                </g>
+
+                <!-- Right Sweeping Mesh Ribbon -->
+                <g fill="none" stroke-width="0.75" opacity="0.65">
+                    <path d="M 1280 -100 C 1400 200, 900 450, 1200 800" stroke="rgb(200,120,240)" />
+                    <path d="M 1278 -95 C 1398 202, 902 452, 1201 805" stroke="rgb(199,122,239)" />
+                    <path d="M 1274 -90 C 1395 204, 905 454, 1203 810" stroke="rgb(197,123,238)" />
+                    <path d="M 1268 -85 C 1392 206, 907 456, 1205 815" stroke="rgb(196,125,236)" />
+                    <path d="M 1261 -80 C 1388 208, 911 458, 1207 820" stroke="rgb(194,127,235)" />
+                    <path d="M 1253 -75 C 1384 210, 914 460, 1209 825" stroke="rgb(193,129,233)" />
+                    <path d="M 1243 -70 C 1380 212, 918 462, 1211 830" stroke="rgb(191,130,232)" />
+                    <path d="M 1232 -65 C 1376 214, 922 464, 1213 835" stroke="rgb(189,132,231)" />
+                    <path d="M 1219 -60 C 1371 216, 927 466, 1215 840" stroke="rgb(187,134,229)" />
+                    <path d="M 1205 -55 C 1366 218, 932 468, 1217 845" stroke="rgb(184,136,228)" />
+                    <path d="M 1190 -50 C 1360 220, 937 470, 1218 850" stroke="rgb(182,138,226)" />
+                    <path d="M 1173 -45 C 1354 222, 942 472, 1220 855" stroke="rgb(180,140,225)" />
+                    <path d="M 1155 -40 C 1348 224, 948 474, 1221 860" stroke="rgb(177,142,223)" />
+                    <path d="M 1136 -35 C 1341 226, 954 476, 1222 865" stroke="rgb(175,145,221)" />
+                    <path d="M 1116 -30 C 1334 228, 959 478, 1223 870" stroke="rgb(172,147,220)" />
+                    <path d="M 1095 -25 C 1327 230, 965 480, 1223 875" stroke="rgb(169,149,218)" />
+                    <path d="M 1073 -20 C 1319 232, 971 482, 1224 880" stroke="rgb(166,152,216)" />
+                    <path d="M 1050 -15 C 1311 234, 977 484, 1224 885" stroke="rgb(164,154,215)" />
+                    <path d="M 1026 -10 C 1303 236, 984 486, 1224 890" stroke="rgb(161,156,213)" />
+                    <path d="M 1002 -5 C 1294 238, 990 488, 1224 895" stroke="rgb(158,159,211)" />
+                    <path d="M 977 0 C 1285 240, 996 490, 1223 900" stroke="rgb(155,161,209)" />
+                    <path d="M 951 5 C 1276 242, 1002 492, 1222 905" stroke="rgb(151,164,208)" />
+                    <path d="M 925 10 C 1267 244, 1008 494, 1221 910" stroke="rgb(148,166,206)" />
+                    <path d="M 898 15 C 1257 246, 1015 496, 1220 915" stroke="rgb(145,169,204)" />
+                    <path d="M 871 20 C 1247 248, 1021 498, 1218 920" stroke="rgb(142,172,202)" />
+                    <path d="M 843 25 C 1237 250, 1027 500, 1216 925" stroke="rgb(138,175,200)" />
+                    <path d="M 815 30 C 1226 252, 1033 502, 1214 930" stroke="rgb(135,177,198)" />
+                    <path d="M 787 35 C 1215 254, 1039 504, 1211 935" stroke="rgb(132,180,196)" />
+                    <path d="M 758 40 C 1204 256, 1045 506, 1208 940" stroke="rgb(128,183,194)" />
+                    <path d="M 729 45 C 1193 258, 1051 508, 1204 945" stroke="rgb(125,185,192)" />
+                </g>
+            </svg>
+        </div>
+
+        <div class="container reveal-on-scroll" style="position: relative; z-index: 2;">
+            <h2
+                style="font-family: var(--font-serif); font-size: 3.5rem; color: #2D2A32; font-weight: 400; margin: 0 0 1.5rem 0; letter-spacing: -0.02em;">
+                Begin with a Diagnostic.</h2>
+            <p
+                style="max-width: 650px; margin: 0 auto 3rem; font-size: 1.15rem; color: #5B5665; line-height: 1.7; font-weight: 400;">
                 Book a 45-minute consultative session to assess your child’s current logical standing and discuss a
                 personalised academic blueprint.
             </p>
-            <div class="flex" style="justify-content: center; gap: 1.5rem;">
-                <a href="#" class="btn btn-primary js-open-diagnostic">Book Free Diagnostic & Placement</a>
+            <div class="flex" style="justify-content: center;">
+                <a href="https://calendly.com/admissions-edvera/new-meeting" target="_blank" class="btn"
+                    style="background-color: #1A1A1A; color: white; border: none; padding: 1.25rem 2.8rem; font-size: 1rem; font-weight: 500; border-radius: 4px; display: inline-block; cursor: pointer; transition: background-color 0.2s;">Book
+                    Free Diagnostic &amp; Placement</a>
             </div>
-            <p style="margin-top: 1.5rem; font-size: 0.85rem; opacity: 0.6;">Restricted intake for quality assurance.
+            <p style="margin-top: 2rem; font-size: 0.95rem; color: #8F8C95;">Restricted intake for quality assurance.
             </p>
         </div>
     </section>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            background-color: #FAFAFA;
+            padding: 50px;
+            font-family: sans-serif;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .method-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .method-number {
+            font-family: serif;
+            font-size: 2.5rem;
+            color: #D1D1D1;
+            letter-spacing: 0.05em;
+            font-weight: normal;
+            margin: 0;
+        }
+
+        .method-arrows {
+            display: flex;
+            gap: -5px;
+        }
+
+        .chevron-svg {
+            width: 50px;
+            height: 30px;
+            margin-left: -20px;
+        }
+
+        h4 {
+            font-family: serif;
+            font-size: 1.1rem;
+            color: #1a1a1a;
+            margin: 0 0 0.5rem 0;
+            font-weight: 500;
+        }
+
+        p {
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.6;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="grid">
+        <div>
+            <div class="method-header">
+                <span class="method-number">01</span>
+                <div style="display: flex; align-items: center; padding-left: 10px;">
+                    <!-- 3 overlapping arrows -->
+                    <svg width="60" height="30" viewBox="0 0 90 30" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Base style for all chevrons: fill color #C3CBFA, stroke #8E98DD -->
+                        <g fill="#A9B4F1" stroke="#8795E8" stroke-width="1.5" stroke-linejoin="round">
+                            <!-- Chevron 1 -->
+                            <polygon points="0,5 15,5 25,15 15,25 0,25 10,15" opacity="0.8" />
+                            <!-- Chevron 2 -->
+                            <polygon points="15,5 30,5 40,15 30,25 15,25 25,15" opacity="0.8" />
+                            <!-- Chevron 3 -->
+                            <polygon points="30,5 45,5 55,15 45,25 30,25 40,15" opacity="0.8" />
+                        </g>
+                    </svg>
+                </div>
+            </div>
+            <h4>Diagnostic</h4>
+            <p>We assess current cognitive standing and logic gaps before teaching starts.</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

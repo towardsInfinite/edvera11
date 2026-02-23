@@ -143,6 +143,57 @@ img {
     display: block;
 }
 
+/* Hero Ticket Element */
+.hero-ticket-bg {
+    background-color: #EAE3D2;
+    padding: 3rem 2.5rem;
+    border-radius: 40px;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0;
+    position: relative;
+    transition: background-color var(--duration-hover) var(--ease-breath);
+}
+
+@media (min-width: 768px) {
+    .hero-ticket-bg {
+        padding: 4rem;
+        margin-left: -4rem;
+        margin-top: -2rem;
+    }
+}
+
+[data-theme="dark"] .hero-ticket-bg {
+    background-color: #3b3529;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .hero-ticket-bg {
+        background-color: #3b3529;
+    }
+}
+
+.hero-ticket-bg::before,
+.hero-ticket-bg::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: var(--bg-page);
+    border-radius: 50%;
+    z-index: 1;
+    transition: background-color 0.3s var(--ease-breath);
+}
+
+.hero-ticket-bg::before {
+    top: -30px;
+    left: -30px;
+}
+
+.hero-ticket-bg::after {
+    bottom: -30px;
+    right: -30px;
+}
+
 /* Utilities */
 .container {
     max-width: var(--spacing-container);

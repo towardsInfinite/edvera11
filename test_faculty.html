@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 50px;
+            background-color: white;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .faculty-section {
+            position: relative;
+            background: linear-gradient(90deg, #E9E1FC 0%, #FDFDFF 100%);
+            overflow: hidden;
+            padding: 6rem 0;
+        }
+
+        .bg-shapes {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: center;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #3B3845;
+            margin-top: 0;
+            margin-bottom: 2rem;
+            font-weight: 500;
+            letter-spacing: -0.02em;
+        }
+
+        p.desc {
+            font-size: 1.05rem;
+            color: #4C465E;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .quote-card {
+            background: white;
+            padding: 3rem 4rem;
+            box-shadow: 0 10px 40px rgba(181, 169, 219, 0.1);
+            position: relative;
+        }
+
+        .quote-card p {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: #554D69;
+            text-align: center;
+            line-height: 1.6;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="faculty-section">
+        <!-- Abstract SVG Background -->
+        <svg class="bg-shapes" viewBox="0 0 1440 600" preserveAspectRatio="xMidYMid slice"
+            xmlns="http://www.w3.org/2000/svg">
+            <!-- Background base for right side to ensure smoothness -->
+            <!-- Curved band left -->
+            <path d="M 150,0 C 250,200 150,400 300,600 L 0,600 L 0,0 Z" fill="#D7C9F6" opacity="0.6" />
+
+            <!-- Large back curved shape behind card -->
+            <path d="M 800,0 C 800,200 1200,100 1200,600 L 800,600 C 600,400 900,200 900,0 Z" fill="#D7C9F6"
+                opacity="0.4" />
+
+            <!-- Concentric circles/arcs right bottom -->
+            <circle cx="1200" cy="650" r="250" fill="none" stroke="#E3DBF8" stroke-width="80" opacity="0.8" />
+        </svg>
+
+        <div class="container">
+            <div>
+                <h2>Faculty &amp; Academic Culture</h2>
+                <p class="desc">
+                    Our faculty consists of experienced educators with 5–10+ years
+                    of teaching and mentoring experience, alongside industry
+                    professionals and academic researchers.
+                </p>
+                <p class="desc">
+                    They bring rigour from backgrounds including IIT Madras, IIT
+                    Bombay, UCL, and University of Bristol, VIT, Jadavpur
+                    University balanced with industry exposure from Deloitte,
+                    Amazon, BCG, Salesforce and many more.
+                </p>
+            </div>
+
+            <div>
+                <div class="quote-card">
+                    <p>
+                        "We hire for patience, academic depth, and the<br>ability to mentor."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

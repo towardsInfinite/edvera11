@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            background-color: #F9FAFB;
+            padding: 50px;
+            font-family: serif;
+        }
+
+        .section-bg {
+            background-color: #FAF4F8;
+            padding: 100px 0;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            position: relative;
+            z-index: 2;
+            align-items: center;
+        }
+
+        .left-side {
+            position: relative;
+        }
+
+        .left-svg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 600px;
+            height: 600px;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+        }
+
+        .right-side {
+            position: relative;
+        }
+
+        .right-svg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 700px;
+            height: 700px;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+        }
+
+
+        .title {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: #1a1a1a;
+            letter-spacing: -0.02em;
+        }
+
+        .content-list {
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+        }
+
+        h5 {
+            font-family: serif;
+            font-size: 1.25rem;
+            font-weight: normal;
+            margin: 0 0 0.5rem 0;
+            color: #121212;
+        }
+
+        p {
+            font-family: sans-serif;
+            font-size: 1rem;
+            color: #555;
+            margin: 0;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="section-bg">
+        <div class="container">
+
+            <div class="left-side">
+                <svg class="left-svg" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#E2D9F3" stop-opacity="0" />
+                            <stop offset="50%" stop-color="#E2D9F3" stop-opacity="0.8" />
+                            <stop offset="100%" stop-color="#D1BFEA" stop-opacity="1" />
+                        </linearGradient>
+                    </defs>
+                    <g transform="translate(100, 100) rotate(15)">
+                        <!-- Leaf shape: path M x,y C x,y x,y x,y -->
+                        <!-- We can use a path to draw a curved petal -->
+                        <path d="M 50,300 C 50,100 200,50 200,50 C 200,50 200,250 50,300 Z" fill="url(#grad1)" />
+                    </g>
+                </svg>
+                <h2 class="title" style="margin-left: 100px;">Quiet Authority.</h2>
+            </div>
+
+            <div class="right-side">
+                <svg class="right-svg" viewBox="0 0 700 700" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Concentric lines -->
+                </svg>
+                <div class="content-list">
+                    <div>
+                        <h5>1:1 Only. No Batches.</h5>
+                        <p>Education is personal. We strictly avoid the factory-model of batch learning.</p>
+                    </div>
+                    <div>
+                        <h5>International Standards</h5>
+                        <p>Our curriculum is bench-marked against global IGCSE and IB standards, not just local
+                            requirements.</p>
+                    </div>
+                    <div>
+                        <h5>Disciplined Culture</h5>
+                        <p>We do not gamify learning with meaningless badges. We reward understanding.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

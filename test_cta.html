@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .section {
+            background-color: #EFEFEF;
+            position: relative;
+            padding: 8rem 0;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 3.5rem;
+            color: #2D2A32;
+            font-weight: 400;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        p.subtitle {
+            max-width: 700px;
+            margin: 0 auto 2.5rem;
+            font-family: 'Inter', sans-serif;
+            font-size: 1.15rem;
+            color: #5B5665;
+            line-height: 1.7;
+        }
+
+        .btn-cta {
+            background-color: #1A1A1A;
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            font-weight: 500;
+            border-radius: 4px;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        p.small {
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            color: #8F8C95;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .bg-curves {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="section">
+        <!-- SVG background containing parametric curves -->
+        <svg class="bg-curves" viewBox="0 0 1440 600" preserveAspectRatio="xMidYMid slice"
+            xmlns="http://www.w3.org/2000/svg">
+            <g id="left-ribbon" fill="none" stroke="#A892DB" stroke-width="0.75" opacity="0.6"></g>
+            <g id="right-ribbon" fill="none" stroke="#AC9BD7" stroke-width="0.75" opacity="0.6"></g>
+        </svg>
+
+        <div class="content">
+            <h2>Begin with a Diagnostic.</h2>
+            <p class="subtitle">Book a 45-minute consultative session to assess your child’s current logical standing
+                and discuss a personalised academic blueprint.</p>
+            <button class="btn-cta">Book Free Diagnostic & Placement</button>
+            <p class="small">Restricted intake for quality assurance.</p>
+        </div>
+    </section>
+
+    <!-- Script to generate parametric curves -->
+    <script>
+        const leftGrp = document.getElementById('left-ribbon');
+        const rightGrp = document.getElementById('right-ribbon');
+
+        // Generate left twisted ribbon (Lissajous curve or similar oscillating path)
+        let leftHTML = '';
+        for (let i = 0; i < 40; i++) {
+            // We can create a sine wave that gets progressively wider or offset
+            let phase = i * 0.15;
+            let d = `M -100 ${-200 + i * 5} C 300 ${100 - i * 10}, 100 ${500 + i * 15}, 150 ${900 + i * 5}`;
+            // But parametric along Y is better
+        }
+
+        // A better approach: generate a parametric bezier path for each line
+        function generateLeftRibbon(numLines) {
+            let html = '';
+            for (let i = 0; i < numLines; i++) {
+                let dx1 = Math.sin(i * 0.1) * 150;
+                let dx2 = Math.cos(i * 0.15) * 200;
+                let y_offset = i * 2;
+                html += `<path d="M ${100 + dx1} ${-100 + y_offset} C ${300 + dx2} 200, ${-100 + dx1} 400, ${150 + dx2} 700" />`;
+            }
+            return html;
+        }
+
+        function generateRightRibbon(numLines) {
+            let html = '';
+            for (let i = 0; i < numLines; i++) {
+                let dx1 = Math.cos(i * 0.12) * 180;
+                let dx2 = Math.sin(i * 0.08) * 120;
+                let y_offset = i * 2.5;
+                html += `<path d="M ${1200 + dx1} ${-50 + y_offset} C ${1400 - dx2} 150, ${1000 + dx1 * 0.5} 350, ${1300 + dx2} 600" />`;
+            }
+            return html;
+        }
+
+        leftGrp.innerHTML = generateLeftRibbon(80);
+        rightGrp.innerHTML = generateRightRibbon(100);
+    </script>
+</body>
+
+</html>
