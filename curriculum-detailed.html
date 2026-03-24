@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>Detailed Curriculum Structure | EDVERA</title>
+    <meta name="description"
+        content="Detailed computer science curriculum for EDVERA. From Computational Thinking Fundamentals to Python Programming and Advanced Concepts.">
+
+    <!-- Design System -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/pathways.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/logo.png" type="image/png">
+    
+    <style>
+        .module-interactive {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            transition: all var(--duration-hover) var(--ease-breath);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+            display: grid;
+            grid-template-columns: 80px 1fr;
+            gap: 30px;
+        }
+
+        .module-interactive:hover {
+            border-color: var(--color-navy);
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+        }
+
+        .module-num-bg {
+            font-family: var(--font-serif);
+            font-size: 5rem;
+            color: var(--accent-amber);
+            opacity: 0.15;
+            position: absolute;
+            top: -10px;
+            right: 20px;
+            pointer-events: none;
+            transition: opacity var(--duration-hover), transform var(--duration-hover);
+        }
+
+        .module-interactive:hover .module-num-bg {
+            opacity: 0.3;
+            transform: scale(1.1);
+        }
+
+        .curriculum-grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 1.5rem;
+        }
+
+        .curriculum-box {
+            background: var(--bg-alt);
+            padding: 1.5rem;
+            border-radius: 6px;
+            border-left: 3px solid var(--accent-amber);
+        }
+        
+        .curriculum-box h5 {
+            font-size: 1rem;
+            color: var(--text-main);
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .curriculum-box ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            opacity: 0.85;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .curriculum-box ul li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 8px;
+            color: var(--text-muted);
+        }
+        
+        .curriculum-box ul li::before {
+            content: "•";
+            color: var(--accent-amber);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .methodology-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .method-card {
+            background: var(--bg-card);
+            padding: 30px;
+            border: 1px solid var(--border-subtle);
+            border-radius: 4px;
+            position: relative;
+            z-index: 1;
+            transition: transform var(--duration-hover) var(--ease-breath);
+        }
+
+        .method-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--accent-teal);
+        }
+        
+        @media (max-width: 768px) {
+            .module-interactive {
+                grid-template-columns: 1fr;
+                padding: 1.5rem;
+            }
+            .curriculum-grid-2 {
+                grid-template-columns: 1fr;
+            }
+            .module-num-bg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="nav-logo" style="display: flex; align-items: center; gap: 0.5rem;">
+                <img src="assets/images/logo.png" alt="EDVERA Logo" style="height: 42px; width: auto;">
+                EDVERA
+            </a>
+            <button class="mobile-nav-toggle" aria-label="Toggle navigation">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 6H20M4 12H20M4 18H20" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </button>
+            <div class="nav-links">
+                <a href="pathways.html" class="hover-link">Pathways</a>
+                <a href="method.html" class="hover-link">Method</a>
+                <a href="diagnostic.html" class="hover-link">Pre Diagnostic</a>
+                <a href="ed-lab.html" class="hover-link">ED-LAB</a>
+                <a href="journeys.html" class="hover-link">Journeys</a>
+                <a href="parents.html" class="hover-link">Parents</a>
+                <a href="https://calendly.com/admissions-edvera/new-meeting" target="_blank" class="btn btn-primary"
+                    style="padding: 0.6rem 1.2rem; font-size: 0.85rem;">Book Free Diagnostic</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="curriculum-header" style="position: relative; overflow: hidden; padding-bottom: 120px;">
+        <!-- Background decorative vectors -->
+        <div style="position: absolute; top:0; left: 0; width: 100%; height: 100%; opacity: 0.05; pointer-events: none; z-index: 0;">
+            <svg viewBox="0 0 800 600" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+                <rect x="0" y="0" width="800" height="600" fill="transparent" />
+                <path d="M-100,500 L800,-100 M-100,600 L800,0 M200,600 L800,200" stroke="#fff" stroke-width="40"/>
+            </svg>
+        </div>
+        <div class="container" style="position: relative; z-index: 1;">
+            <span class="pathway-pill" style="margin-bottom: 30px; border-color: rgba(255,255,255,0.4); color: white;">Complete Roadmap</span>
+            <h1 style="font-size: 3.8rem; margin-bottom: 20px; font-family: var(--font-serif); font-weight: 500;">Curriculum Structure</h1>
+            <p class="curriculum-tagline" style="max-width: 700px; margin: 0 auto; color: #E8E2F6; font-size: 1.35rem; line-height: 1.6;">A complete progression from computational thinking and flowchart logic to professional Python development and computer science domains.</p>
+        </div>
+    </header>
+
+    <main>
+        
+        <!-- Parent Intro Section -->
+        <section class="curriculum-section bg-alt" style="padding-top: 60px; padding-bottom: 60px; border-bottom: 1px solid var(--border-subtle);">
+            <div class="container grid" style="grid-template-columns: 1fr 1.5fr; gap: 40px; align-items: start;">
+                 <span class="section-label" style="font-family: var(--font-sans);">What is this framework?</span>
+                 <div class="reveal-on-scroll" style="background: var(--bg-card); padding: 30px; border-radius: 6px; box-shadow: 0 4px 20px rgba(0,0,0,0.03); border: 1px solid var(--border-subtle);">
+                     <p style="font-size: 1.15rem; color: var(--text-muted); line-height: 1.8;">
+                        This 10-module architecture represents EDVERA's complete academic core. It's designed to <strong>build the problem-solving mindset before a single line of code is written</strong>, ensuring deep, structural understanding. We invite parents and students to review the detailed topics, practices, and specific assessments below.
+                     </p>
+                 </div>
+            </div>
+        </section>
+
+        <!-- Dynamic Curriculum Modules -->
+        <section class="curriculum-section" style="background-color: var(--bg-page);">
+            <div class="container">
+                
+                <h2 style="font-family: var(--font-serif); font-size: 2.5rem; text-align: center; margin-bottom: 60px; color: var(--color-navy);">The 10-Module Progression</h2>
+
+                <div class="module-list">
+                    
+                    <!-- Module 1 -->
+                    <div class="module-interactive reveal-on-scroll">
+                        <div class="module-num-bg">01</div>
+                        <div class="module-number" style="font-family: var(--font-serif); color: var(--color-navy);">01</div>
+                        <div class="module-content" style="border-left: none; padding-left: 0; padding-bottom: 0;">
+                            <div class="module-header">
+                                <h3 class="module-name" style="font-family: var(--font-serif); font-size: 1.8rem; color: var(--color-navy);">Computational Thinking Fundamentals</h3>
+                            </div>
+                            <p class="module-description" style="font-size: 1.1rem; color: var(--text-muted); font-weight: 500;">Objective: Build core problem-solving mindset before coding.</p>
+                            
+                            <div class="curriculum-grid-2">
+                                <div class="curriculum-box">
+                                    <h5>
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                                        Topics Covered
+                                    </h5>
+                                    <ul>
+                                        <li>What is Computer Science?</li>
+                                        <li>What is a program?</li>
+                                        <li>Input, Process, Output model</li>
+                                        <li>Instructions and sequence</li>
+                                        <li>Algorithmic thinking in daily life</li>
+                                        <li>Decomposition & Pattern recognition</li>
+                                        <li>Abstraction (ignoring unnecessary details)</li>
+                                    </ul>
+                                </div>
+                                <div class="curriculum-box" style="background-color: #F8F9FA;">
+                                    <h5>
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                                        Practice & Assessment
+                                    </h5>
+                                    <ul>
+                                        <li><strong>Practice:</strong> Write algorithms for daily tasks. Identify inputs/outputs in common systems.</li>
+                                        <li><strong>Assessment:</strong> Short written algorithms for real-life tasks.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Module 2 -->
+                    <div class="module-interactive reveal-on-scroll delay-1">
+                        <div class="module-num-bg">02</div>
+                        <div class="module-number" style="font-family: var(--font-serif); color: var(--color-navy);">02</div>
+                        <div class="module-content" style="border-left: none; padding-left: 0; padding-bottom: 0;">
+                            <div class="module-header">
+                                <h3 class="module-name" style="font-family: var(--font-serif); font-size: 1.8rem; color: var(--color-navy);">Algorithms, Flowcharts, and Pseudocode</h3>
+                            </div>
+                            <p class="module-description" style="font-size: 1.1rem; color: var(--text-muted); font-weight: 500;">Objective: Teach structured problem representation.</p>
+                            
+                            <div class="curriculum-grid-2">
+                                <div class="curriculum-box">
+                                    <h5>
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line></svg>
+                                        Topics Covered
+                                    </h5>
+                                    <ul>
+                                        <li>Characteristics of good algorithms</li>
+                                        <li>Flowcharts (Start/End, Input/Output, Process, Decision)</li>
+                                        <li>Flow of control</li>
+                                        <li>Pseudocode (Structured English)</li>
+                                        <li>Sequencing & Conditional logic</li>
+                                        <li>Loops in pseudocode</li>
+                                    </ul>
+                                </div>
+                                <div class="curriculum-box" style="background-color: #F8F9FA;">
+                                    <h5>
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                                        Practice & Assessment
+                                    </h5>
+                                    <ul>
+                                        <li><strong>Practice:</strong> Convert daily tasks into flowcharts. Write pseudocode for simple problems.</li>
+                                        <li><strong>Assessment:</strong> Design flowcharts and pseudocode for given problems.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Module 3 -->
+                    <div class="module-interactive reveal-on-scroll">
+                        <div class="module-num-bg">03</div>
+                        <div class="module-number" style="font-family: var(--font-serif); color: var(--color-navy);">03</div>
+                        <div class="module-content" style="border-left: none; padding-left: 0; padding-bottom: 0;">
+                            <div class="module-header">
+                                <h3 class="module-name" style="font-family: var(--font-serif); font-size: 1.8rem; color: var(--color-navy);">Introduction to Programming (Python)</h3>
+                            </div>
+                            <p class="module-description" style="font-size: 1.1rem; color: var(--text-muted); font-weight: 500;">Objective: Transition from logic to real code.</p>
+                            
+                            <div class="curriculum-grid-2">
+                                <div class="curriculum-box">
+                                    <h5>
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                                        Topics Covered
+                                    </h5>
+                                    <ul>
+                                        <li>What is a programming language</li>
+                                        <li>Python setup and execution</li>
+                                        <li>Output statements</li>
+                                        <li>Variables and data types</li>
+                                        <li>Input from user</li>
+                                        <li>Basic expressions</li>
+                                    </ul>
+                                </div>
+                                <div class="curriculum-box" style="background-color: #F8F9FA;">
+                                    <h5>
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                                        Practice & Assessment
+                                    </h5>
+                                    <ul>
+                                        <li><strong>Practice:</strong> Greeting program, simple calculator, age-based message.</li>
+                                        <li><strong>Assessment:</strong> Write simple programs based directly on previously structured pseudocode.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Module 4 -->
+                    <div class="module-interactive reveal-on-scroll">
+                        <div class="module-num-bg">04</div>
+                        <div class="module-number" style="font-family: var(--font-serif); color: var(--color-navy);">04</div>
+                        <div class="module-content" style="border-left: none; padding-left: 0; padding-bottom: 0;">
+                            <div class="module-header">
+                                <h3 class="module-name" style="font-family: var(--font-serif); font-size: 1.8rem; color: var(--color-navy);">Control Structures (Decision Making)</h3>
+                            </div>
+                            <p class="module-description" style="font-size: 1.1rem; color: var(--text-muted); font-weight: 500;">Objective: Teach branching logic.</p>
+                            
+                            <div class="curriculum-grid-2">
+                                <div class="curriculum-box">
+                                    <h5><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg> Topics Covered</h5>
+                                    <ul>
+                                        <li>Conditional statements (if, elif, else)</li>
+                                        <li>Comparison operators</li>
+                                        <li>Logical operators (and, or, not)</li>
+                                        <li>Nested conditions</li>
+                                        <li>Translating conditional flowcharts to code</li>
+                                    </ul>
+                                </div>
+                                <div class="curriculum-box" style="background-color: #F8F9FA;">
+                                    <h5><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg> Practice & Assessment</h5>
+                                    <ul>
+                                        <li><strong>Practice:</strong> Pass/Fail checker, Grade classification, Menu-based program.</li>
+                                        <li><strong>Assessment:</strong> Flowchart → Pseudocode → Python conversion tasks.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Module 5 -->
+                    <div class="module-interactive reveal-on-scroll">
+                        <div class="module-num-bg">05</div>
+                        <div class="module-number" style="font-family: var(--font-serif); color: var(--color-navy);">05</div>
+                        <div class="module-content" style="border-left: none; padding-left: 0; padding-bottom: 0;">
+                            <div class="module-header">
+                                <h3 class="module-name" style="font-family: var(--font-serif); font-size: 1.8rem; color: var(--color-navy);">Iteration (Loops)</h3>
+                            </div>
+                            <p class="module-description" style="font-size: 1.1rem; color: var(--text-muted); font-weight: 500;">Objective: Teach repetition and automation.</p>
+                            
+                            <div class="curriculum-grid-2">
+                                <div class="curriculum-box">
+                                    <h5><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.59-9.21l-3.25 3.14"></path></svg> Topics Covered</h5>
+                                    <ul>
+                                        <li>Why loops are needed</li>
+                                        <li>For loops vs While loops</li>
+                                        <li>Loop control (break, continue)</li>
+                                        <li>Translating pseudocode loops to executable code</li>
+                                    </ul>
+                                </div>
+                                <div class="curriculum-box" style="background-color: #F8F9FA;">
+                                    <h5><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg> Practice & Assessment</h5>
+                                    <ul>
+                                        <li><strong>Practice:</strong> Number series generation, Multiplication tables, Pattern printing.</li>
+                                        <li><strong>Assessment:</strong> Write programs using loops for complex repetitive tasks.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Module 6 -->
+                    <div class="module-interactive reveal-on-scroll">
+                        <div class="module-num-bg">06</div>
+                        <div class="module-number" style="font-family: var(--font-serif); color: var(--color-navy);">06</div>
+                        <div class="module-content" style="border-left: none; padding-left: 0; padding-bottom: 0;">
+                            <div class="module-header">
+                                <h3 class="module-name" style="font-family: var(--font-serif); font-size: 1.8rem; color: var(--color-navy);">Data Handling (Lists and Basic Structures)</h3>
+                            </div>
+                            <p class="module-description" style="font-size: 1.1rem; color: var(--text-muted); font-weight: 500;">Objective: Teach data organization and aggregation.</p>
+                            <div class="curriculum-grid-2">
+                                <div class="curriculum-box">
+                                    <h5><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg> Topics Covered</h5>
+                                    <ul>
+                                        <li>Lists arrays and mutability</li>
+                                        <li>Indexing and Iteration over lists</li>
+                                        <li>Simple searching algorithms</li>
+                                        <li>Aggregation (sum, max, min, count)</li>
+                                    </ul>
+                                </div>
+                                <div class="curriculum-box" style="background-color: #F8F9FA;">
+                                    <h5><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg> Practice & Assessment</h5>
+                                    <ul>
+                                        <li><strong>Practice:</strong> Student marks analysis, Dynamic To-do list, Simple leaderboard logic.</li>
+                                        <li><strong>Assessment:</strong> Programs that manipulate and query collections of data.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Module 7 -->
+                    <div class="module-interactive reveal-on-scroll">
+                        <div class="module-num-bg">07</div>
+                        <div class="module-number" style="font-family: var(--font-serif); color: var(--color-navy);">07</div>
+                        <div class="module-content" style="border-left: none; padding-left: 0; padding-bottom: 0;">
+                            <div class="module-header">
+                                <h3 class="module-name" style="font-family: var(--font-serif); font-size: 1.8rem; color: var(--color-navy);">Debugging and Program Quality</h3>
+                            </div>
+                            <p class="module-description" style="font-size: 1.1rem; color: var(--text-muted); font-weight: 500;">Objective: Build debugging mindset and error handling skills.</p>
+                            <div class="curriculum-grid-2">
+                                <div class="curriculum-box">
+                                    <h5><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg> Topics Covered</h5>
+                                    <ul>
+                                        <li>Types of errors & Reading stack traces</li>
+                                        <li>Debugging strategies and logical isolation</li>
+                                        <li>Step-by-step tracing techniques</li>
+                                        <li>Improving readability and basic input validation</li>
+                                    </ul>
+                                </div>
+                                <div class="curriculum-box" style="background-color: #F8F9FA;">
+                                    <h5><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg> Practice & Assessment</h5>
+                                    <ul>
+                                        <li><strong>Practice:</strong> Fixing broken legacy programs intentionally seeded with bugs.</li>
+                                        <li><strong>Assessment:</strong> Debugging exercises with hidden logical errors.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Module 8 -->
+                    <div class="module-interactive reveal-on-scroll">
+                        <div class="module-num-bg">08</div>
+                        <div class="module-number" style="font-family: var(--font-serif); color: var(--color-navy);">08</div>
+                        <div class="module-content" style="border-left: none; padding-left: 0; padding-bottom: 0;">
+                            <div class="module-header">
+                                <h3 class="module-name" style="font-family: var(--font-serif); font-size: 1.8rem; color: var(--color-navy);">Mini Projects (Application of Concepts)</h3>
+                            </div>
+                            <p class="module-description" style="font-size: 1.1rem; color: var(--text-muted); font-weight: 500;">Objective: Apply fundamentals in standalone, real contexts.</p>
+                            <div class="curriculum-grid-2">
+                                <div class="curriculum-box">
+                                    <h5><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg> Project Options</h5>
+                                    <ul>
+                                        <li>Quiz application</li>
+                                        <li>Number guessing game</li>
+                                        <li>Simple chatbot (rule-based)</li>
+                                        <li>Student report card generator</li>
+                                        <li>Password strength checker</li>
+                                    </ul>
+                                </div>
+                                <div class="curriculum-box" style="background-color: #F8F9FA;">
+                                    <h5><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg> Deliverables & Assessment</h5>
+                                    <ul>
+                                        <li>Working modular program</li>
+                                        <li>Flowchart of the logic and pseudocode of solution</li>
+                                        <li>Written explanation of approach</li>
+                                        <li><strong>Assessment:</strong> Project rubric evaluating correctness, clarity, logic.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Module 9 -->
+                    <div class="module-interactive reveal-on-scroll">
+                        <div class="module-num-bg">09</div>
+                        <div class="module-number" style="font-family: var(--font-serif); color: var(--color-navy);">09</div>
+                        <div class="module-content" style="border-left: none; padding-left: 0; padding-bottom: 0;">
+                            <div class="module-header">
+                                <h3 class="module-name" style="font-family: var(--font-serif); font-size: 1.8rem; color: var(--color-navy);">Introduction to Computer Science Domains</h3>
+                            </div>
+                            <p class="module-description" style="font-size: 1.1rem; color: var(--text-muted); font-weight: 500;">Objective: Build awareness of future academic pathways.</p>
+                            <div class="curriculum-grid-2">
+                                <div class="curriculum-box">
+                                    <h5><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg> Topics Covered</h5>
+                                    <ul>
+                                        <li>Software development</li>
+                                        <li>Artificial Intelligence & Machine Learning</li>
+                                        <li>Web development</li>
+                                        <li>Cybersecurity</li>
+                                        <li>Data Science</li>
+                                        <li>Robotics</li>
+                                    </ul>
+                                </div>
+                                <div class="curriculum-box" style="background-color: #F8F9FA;">
+                                    <h5><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg> Outcomes</h5>
+                                    <ul>
+                                        <li>Students develop a macro-level understanding of how foundational CS applies to vast, real-world engineering fields.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Module 10 -->
+                    <div class="module-interactive reveal-on-scroll">
+                        <div class="module-num-bg" style="right: 10px;">10</div>
+                        <div class="module-number" style="font-family: var(--font-serif); color: var(--color-navy);">10</div>
+                        <div class="module-content" style="border-left: none; padding-left: 0; padding-bottom: 0;">
+                            <div class="module-header">
+                                <h3 class="module-name" style="font-family: var(--font-serif); font-size: 1.8rem; color: var(--color-navy);">Learning How to Learn Computer Science</h3>
+                            </div>
+                            <p class="module-description" style="font-size: 1.1rem; color: var(--text-muted); font-weight: 500;">Objective: Develop independent learning skills.</p>
+                            <div class="curriculum-grid-2">
+                                <div class="curriculum-box">
+                                    <h5><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg> Topics Covered</h5>
+                                    <ul>
+                                        <li>Breaking massive problems into manageable ones</li>
+                                        <li>Searching for technical solutions effectively</li>
+                                        <li>How to read and decipher deep documentation</li>
+                                        <li>Methods for consistent practice</li>
+                                        <li>Building a long-term learning portfolio</li>
+                                    </ul>
+                                </div>
+                                <div class="curriculum-box" style="background-color: #F8F9FA;">
+                                    <h5><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg> Outcomes</h5>
+                                    <ul>
+                                        <li>Cultivates a permanent independent engineering mindset. Students rely less on teachers over time and more on intellectual curiosity.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Teaching Methodology -->
+        <section class="section" style="background-color: #F6F5F2; border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+            <div class="container relative">
+                
+                <h2 class="reveal-on-scroll" style="font-family: var(--font-serif); font-size: 2.8rem; text-align: center; margin-bottom: 10px; color: var(--color-navy);">Teaching Methodology</h2>
+                <p class="text-center reveal-on-scroll" style="color: var(--text-muted); font-size: 1.15rem; max-width: 600px; margin: 0 auto 50px;">Professional Pedagogy Standards implemented dynamically in a 1:1 setting.</p>
+                
+                <div class="methodology-grid">
+                    <!-- Method 1 -->
+                    <div class="method-card reveal-on-scroll">
+                        <div style="background-color: rgba(95, 166, 166, 0.1); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="var(--accent-teal)" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        </div>
+                        <h4 style="font-family: var(--font-serif); font-size: 1.4rem; color: var(--color-navy); margin-bottom: 15px;">Concept to Code Pipeline</h4>
+                        <p style="color: var(--text-muted); line-height: 1.6;">Concept &rarr; Visual representation &rarr; Pseudocode &rarr; Executable Code. Students never write code without modeling it logically first.</p>
+                    </div>
+
+                    <!-- Method 2 -->
+                    <div class="method-card reveal-on-scroll delay-1">
+                        <div style="background-color: rgba(212, 177, 90, 0.1); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="var(--accent-amber)" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+                        </div>
+                        <h4 style="font-family: var(--font-serif); font-size: 1.4rem; color: var(--color-navy); margin-bottom: 15px;">Project-Based Mastery</h4>
+                        <p style="color: var(--text-muted); line-height: 1.6;">Applying disconnected syntax into integrated projects. Real-world applications to evaluate comprehensive synthesis.</p>
+                    </div>
+
+                    <!-- Method 3 -->
+                    <div class="method-card reveal-on-scroll delay-2">
+                        <div style="background-color: rgba(138, 127, 191, 0.1); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="var(--accent-violet)" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                        </div>
+                        <h4 style="font-family: var(--font-serif); font-size: 1.4rem; color: var(--color-navy); margin-bottom: 15px;">Continuous Formative Eva</h4>
+                        <p style="color: var(--text-muted); line-height: 1.6;">Constant checks for understanding embedded into lessons, prioritizing deep retention over superficial pacing.</p>
+                    </div>
+
+                    <!-- Method 4 -->
+                    <div class="method-card reveal-on-scroll">
+                        <div style="background-color: rgba(95, 166, 166, 0.1); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="var(--accent-teal)" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                        </div>
+                        <h4 style="font-family: var(--font-serif); font-size: 1.4rem; color: var(--color-navy); margin-bottom: 15px;">Error-Driven Learning</h4>
+                        <p style="color: var(--text-muted); line-height: 1.6;">Errors are engineered deliberately into problem sets. Bug resolution becomes a primary vehicle for teaching structural stability.</p>
+                    </div>
+
+                    <!-- Method 5 -->
+                    <div class="method-card reveal-on-scroll delay-1">
+                        <div style="background-color: rgba(212, 177, 90, 0.1); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="var(--accent-amber)" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                        </div>
+                        <h4 style="font-family: var(--font-serif); font-size: 1.4rem; color: var(--color-navy); margin-bottom: 15px;">Explanation-Based</h4>
+                        <p style="color: var(--text-muted); line-height: 1.6;">The Feynman Technique: we require students to verbally explain their algorithms and logical proofs back to instructors.</p>
+                    </div>
+
+                    <!-- Method 6 -->
+                    <div class="method-card reveal-on-scroll delay-2">
+                        <div style="background-color: rgba(138, 127, 191, 0.1); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="var(--accent-violet)" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+                        </div>
+                        <h4 style="font-family: var(--font-serif); font-size: 1.4rem; color: var(--color-navy); margin-bottom: 15px;">Portfolio Evaluation</h4>
+                        <p style="color: var(--text-muted); line-height: 1.6;">Progress is measured quantitatively by building an expanding portfolio of documented structural proofs and scripts.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="academic-cta-block">
+            <div class="container reveal-on-scroll">
+                <h2 style="font-family: var(--font-serif); font-size: 2.5rem; margin-bottom: 1.5rem;">Ready to Begin?</h2>
+                <p style="max-width: 600px; margin: 0 auto 2.5rem; opacity: 0.8; font-size: 1.15rem;">
+                    Every journey at EDVERA begins with a diagnostic. We match your child's thinking profile to the right starting point in this curriculum.
+                </p>
+                <div style="display: flex; flex-direction: column; align-items: center; gap: 20px;">
+                    <a href="diagnostic.html" class="btn-premium">Start Pre-Diagnostic Assessment</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer style="padding: 4rem 0; background-color: var(--color-bg-light); border-top: 1px solid var(--border-subtle);">
+        <div class="container grid" style="grid-template-columns: 1fr 1fr; gap: 2rem;">
+            <div>
+                <a href="index.html" class="nav-logo" style="display: block; margin-bottom: 1rem;">EDVERA</a>
+                <p style="font-size: 0.9rem; opacity: 0.7; max-width: 300px;">
+                    Personalised education for the intellectually curious.
+                </p>
+            </div>
+            <div style="text-align: right;">
+                <p style="font-size: 0.8rem; opacity: 0.5;">&copy; 2026 EDVERA Education. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        const observerOptions = { threshold: 0.1 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                }
+            });
+        }, observerOptions);
+        document.querySelectorAll('.reveal-on-scroll').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

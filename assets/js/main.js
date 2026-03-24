@@ -293,4 +293,31 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+
+  // --- Parallax Cursor Effect ---
+  const parallaxElements = document.querySelectorAll('.cursor-parallax');
+  if (parallaxElements.length > 0) {
+    let ticking = false;
+    let mouseX = 0;
+    let mouseY = 0;
+    
+    document.addEventListener('mousemove', (e) => {
+      mouseX = (e.clientX / window.innerWidth) * 2 - 1;
+      mouseY = (e.clientY / window.innerHeight) * 2 - 1;
+
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          parallaxElements.forEach(el => {
+            const speed = parseFloat(el.getAttribute('data-speed')) || 20;
+            const x = mouseX * speed;
+            const y = mouseY * speed;
+            el.style.setProperty('--mx', `${x}px`);
+            el.style.setProperty('--my', `${y}px`);
+          });
+          ticking = false;
+        });
+        ticking = true;
+      }
+    });
+  }
 });

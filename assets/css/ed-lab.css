@@ -312,3 +312,27 @@ body>canvas {
     outline: none !important;
     background-color: transparent;
 }
+
+/* Sub-768px fixes for IDE */
+@media (max-width: 768px) {
+    .ide-container {
+        flex-direction: column;
+    }
+    .editor-pane, .output-pane {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid var(--lab-border);
+    }
+    .lab-navbar .nav-right .tool-btn span {
+        display: none; /* Hide text on buttons if any to save space */
+    }
+    .lab-navbar {
+        padding: 0 0.5rem;
+    }
+    .brand-text {
+        font-size: 0.9rem;
+    }
+    .run-btn {
+        padding: 0 1rem;
+    }
+}
